@@ -18,14 +18,14 @@ MDBASE joins and processes data from multiple XLSX databases.
 Quick start
 -----------
 1. Installation: `pip install mdbase`
-2. Introductory examples at
+2. Introductory examples: see
    [GitHub Pages](https://mirekslouf.github.io/mdbase/docs).
 
 Installation, documentation and examples
 ----------------------------------------
 * MDBASE is available at
   [PyPI](https://pypi.org/project/mdbase/)
-  &rArr; installation: `pip install mcreep`
+  &rArr; installation: `pip install mdbase`
 * Home page of the project is at
   [GitHub](https://github.com/mirekslouf/mdbase/) 
   and [GitHub pages](https://mirekslouf.github.io/mdbase/).
