@@ -1,4 +1,4 @@
-MCREEP :: Documentation and examples
+MDBASE :: Documentation and examples
 ------------------------------------
 
 [Complete documentation](./pdoc.html/index.html) of MDBASE package,
