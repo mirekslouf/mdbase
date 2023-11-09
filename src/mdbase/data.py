@@ -12,6 +12,7 @@ Additional manipulations with data in package MDBASE.
 
 import numpy as np
 
+
 def add_normalized_OI(df):
     '''
     Add normalized OI values to database.
@@ -28,7 +29,6 @@ def add_normalized_OI(df):
     -------
     df : pandas.DataFrame object
         Augmented database with newly inserted columns.
-
     '''
     LengthInVivo = replace_non_numeric_values(df.LengthInVivo)
     OI_ave_W = replace_non_numeric_values(df.OI_ave_W)
@@ -45,20 +45,41 @@ def add_normalized_OI(df):
     df['OI_max_n']   = OI_max   / LengthInVivo
     return(df)
 
-def sub_database_with_nonzero_values(df, properties):
+
+def subdatabase_without_missing_values(df, properties):
+    '''
+    Create a sub-database with selected properties and exclude missing values.
+
+    Parameters
+    ----------
+    df : pandas.DataFrame object
+        Database, from which we will select a sub-database.
+    properties : list of strings
+        Names of the properties/columns that should be in the sub-database.
+
+    Returns
+    -------
+    df : pandas.DataFrame object
+        A sub-database that contains only
+        selected properties (= selected columns)
+        and within the selected properties/columns no missing values.
+    '''
     ds = df[properties]
     ds = ds.dropna()
     return(ds)
 
+
 def replace_non_numeric_values(df):
-    ds = df.replace(['?','x','n'],[np.nan, np.nan, np.nan])
+    ds = df.replace(['?','x','n','???'],[np.nan, np.nan, np.nan, np.nan])
     ds = ds.replace(0.0, np.nan)
     return(ds)
+
 
 def exclude_too_early_explants(df, minimum_in_vivo=0.1):
     ds = df[df.FinalEvaluation != 'new_liner']
     ds = ds[ds.LengthInVivo >= minimum_in_vivo]
     return(ds)
+
 
 def exclude_too_high_oxidations(df, OI_limit = 3):
     ds = df[df.OI_max < OI_limit]

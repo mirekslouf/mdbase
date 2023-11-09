@@ -39,7 +39,7 @@
                     <a class="function" href="#add_normalized_OI">add_normalized_OI</a>
             </li>
             <li>
-                    <a class="function" href="#sub_database_with_nonzero_values">sub_database_with_nonzero_values</a>
+                    <a class="function" href="#subdatabase_without_missing_values">subdatabase_without_missing_values</a>
             </li>
             <li>
                     <a class="function" href="#replace_non_numeric_values">replace_non_numeric_values</a>
@@ -101,23 +101,23 @@
 </span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a>
 </span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a>
-</span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a><span class="k">def</span> <span class="nf">add_normalized_OI</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a>    <span class="sd">&#39;&#39;&#39;</span>
-</span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a><span class="sd">    Add normalized OI values to database.</span>
-</span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a><span class="sd">    </span>
-</span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a><span class="sd">    * database = pandas.Dataframe object</span>
-</span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a><span class="sd">    * normalized OI values = OI values divided by LenghtInVivo</span>
-</span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a>
-</span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a><span class="sd">    Parameters</span>
-</span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a><span class="sd">    ----------</span>
-</span><span id="L-24"><a href="#L-24"><span class="linenos">24</span></a><span class="sd">    df :  pandas.DataFrame object</span>
-</span><span id="L-25"><a href="#L-25"><span class="linenos">25</span></a><span class="sd">        Original database containing all data (from joined XLSX databases).</span>
-</span><span id="L-26"><a href="#L-26"><span class="linenos">26</span></a>
-</span><span id="L-27"><a href="#L-27"><span class="linenos">27</span></a><span class="sd">    Returns</span>
-</span><span id="L-28"><a href="#L-28"><span class="linenos">28</span></a><span class="sd">    -------</span>
-</span><span id="L-29"><a href="#L-29"><span class="linenos">29</span></a><span class="sd">    df : pandas.DataFrame object</span>
-</span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a><span class="sd">        Augmented database with newly inserted columns.</span>
-</span><span id="L-31"><a href="#L-31"><span class="linenos">31</span></a>
+</span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a>
+</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a><span class="k">def</span> <span class="nf">add_normalized_OI</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+</span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a>    <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a><span class="sd">    Add normalized OI values to database.</span>
+</span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a><span class="sd">    </span>
+</span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a><span class="sd">    * database = pandas.Dataframe object</span>
+</span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a><span class="sd">    * normalized OI values = OI values divided by LenghtInVivo</span>
+</span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a>
+</span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a><span class="sd">    Parameters</span>
+</span><span id="L-24"><a href="#L-24"><span class="linenos">24</span></a><span class="sd">    ----------</span>
+</span><span id="L-25"><a href="#L-25"><span class="linenos">25</span></a><span class="sd">    df :  pandas.DataFrame object</span>
+</span><span id="L-26"><a href="#L-26"><span class="linenos">26</span></a><span class="sd">        Original database containing all data (from joined XLSX databases).</span>
+</span><span id="L-27"><a href="#L-27"><span class="linenos">27</span></a>
+</span><span id="L-28"><a href="#L-28"><span class="linenos">28</span></a><span class="sd">    Returns</span>
+</span><span id="L-29"><a href="#L-29"><span class="linenos">29</span></a><span class="sd">    -------</span>
+</span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a><span class="sd">    df : pandas.DataFrame object</span>
+</span><span id="L-31"><a href="#L-31"><span class="linenos">31</span></a><span class="sd">        Augmented database with newly inserted columns.</span>
 </span><span id="L-32"><a href="#L-32"><span class="linenos">32</span></a><span class="sd">    &#39;&#39;&#39;</span>
 </span><span id="L-33"><a href="#L-33"><span class="linenos">33</span></a>    <span class="n">LengthInVivo</span> <span class="o">=</span> <span class="n">replace_non_numeric_values</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">LengthInVivo</span><span class="p">)</span>
 </span><span id="L-34"><a href="#L-34"><span class="linenos">34</span></a>    <span class="n">OI_ave_W</span> <span class="o">=</span> <span class="n">replace_non_numeric_values</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">OI_ave_W</span><span class="p">)</span>
@@ -134,24 +134,45 @@
 </span><span id="L-45"><a href="#L-45"><span class="linenos">45</span></a>    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;OI_max_n&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="n">OI_max</span>   <span class="o">/</span> <span class="n">LengthInVivo</span>
 </span><span id="L-46"><a href="#L-46"><span class="linenos">46</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </span><span id="L-47"><a href="#L-47"><span class="linenos">47</span></a>
-</span><span id="L-48"><a href="#L-48"><span class="linenos">48</span></a><span class="k">def</span> <span class="nf">sub_database_with_nonzero_values</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">properties</span><span class="p">):</span>
-</span><span id="L-49"><a href="#L-49"><span class="linenos">49</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">properties</span><span class="p">]</span>
-</span><span id="L-50"><a href="#L-50"><span class="linenos">50</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
-</span><span id="L-51"><a href="#L-51"><span class="linenos">51</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+</span><span id="L-48"><a href="#L-48"><span class="linenos">48</span></a>
+</span><span id="L-49"><a href="#L-49"><span class="linenos">49</span></a><span class="k">def</span> <span class="nf">subdatabase_without_missing_values</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">properties</span><span class="p">):</span>
+</span><span id="L-50"><a href="#L-50"><span class="linenos">50</span></a>    <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-51"><a href="#L-51"><span class="linenos">51</span></a><span class="sd">    Create a sub-database with selected properties and exclude missing values.</span>
 </span><span id="L-52"><a href="#L-52"><span class="linenos">52</span></a>
-</span><span id="L-53"><a href="#L-53"><span class="linenos">53</span></a><span class="k">def</span> <span class="nf">replace_non_numeric_values</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-</span><span id="L-54"><a href="#L-54"><span class="linenos">54</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">&#39;?&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;n&#39;</span><span class="p">],[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">])</span>
-</span><span id="L-55"><a href="#L-55"><span class="linenos">55</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
-</span><span id="L-56"><a href="#L-56"><span class="linenos">56</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
-</span><span id="L-57"><a href="#L-57"><span class="linenos">57</span></a>
-</span><span id="L-58"><a href="#L-58"><span class="linenos">58</span></a><span class="k">def</span> <span class="nf">exclude_too_early_explants</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">minimum_in_vivo</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
-</span><span id="L-59"><a href="#L-59"><span class="linenos">59</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">FinalEvaluation</span> <span class="o">!=</span> <span class="s1">&#39;new_liner&#39;</span><span class="p">]</span>
-</span><span id="L-60"><a href="#L-60"><span class="linenos">60</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="n">ds</span><span class="o">.</span><span class="n">LengthInVivo</span> <span class="o">&gt;=</span> <span class="n">minimum_in_vivo</span><span class="p">]</span>
-</span><span id="L-61"><a href="#L-61"><span class="linenos">61</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
-</span><span id="L-62"><a href="#L-62"><span class="linenos">62</span></a>
-</span><span id="L-63"><a href="#L-63"><span class="linenos">63</span></a><span class="k">def</span> <span class="nf">exclude_too_high_oxidations</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">OI_limit</span> <span class="o">=</span> <span class="mi">3</span><span class="p">):</span>
-</span><span id="L-64"><a href="#L-64"><span class="linenos">64</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">OI_max</span> <span class="o">&lt;</span> <span class="n">OI_limit</span><span class="p">]</span>
-</span><span id="L-65"><a href="#L-65"><span class="linenos">65</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+</span><span id="L-53"><a href="#L-53"><span class="linenos">53</span></a><span class="sd">    Parameters</span>
+</span><span id="L-54"><a href="#L-54"><span class="linenos">54</span></a><span class="sd">    ----------</span>
+</span><span id="L-55"><a href="#L-55"><span class="linenos">55</span></a><span class="sd">    df : pandas.DataFrame object</span>
+</span><span id="L-56"><a href="#L-56"><span class="linenos">56</span></a><span class="sd">        Database, from which we will select a sub-database.</span>
+</span><span id="L-57"><a href="#L-57"><span class="linenos">57</span></a><span class="sd">    properties : list of strings</span>
+</span><span id="L-58"><a href="#L-58"><span class="linenos">58</span></a><span class="sd">        Names of the properties/columns that should be in the sub-database.</span>
+</span><span id="L-59"><a href="#L-59"><span class="linenos">59</span></a>
+</span><span id="L-60"><a href="#L-60"><span class="linenos">60</span></a><span class="sd">    Returns</span>
+</span><span id="L-61"><a href="#L-61"><span class="linenos">61</span></a><span class="sd">    -------</span>
+</span><span id="L-62"><a href="#L-62"><span class="linenos">62</span></a><span class="sd">    df : pandas.DataFrame object</span>
+</span><span id="L-63"><a href="#L-63"><span class="linenos">63</span></a><span class="sd">        A sub-database that contains only</span>
+</span><span id="L-64"><a href="#L-64"><span class="linenos">64</span></a><span class="sd">        selected properties (= selected columns)</span>
+</span><span id="L-65"><a href="#L-65"><span class="linenos">65</span></a><span class="sd">        and within the selected properties/columns no missing values.</span>
+</span><span id="L-66"><a href="#L-66"><span class="linenos">66</span></a><span class="sd">    &#39;&#39;&#39;</span>
+</span><span id="L-67"><a href="#L-67"><span class="linenos">67</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">properties</span><span class="p">]</span>
+</span><span id="L-68"><a href="#L-68"><span class="linenos">68</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</span><span id="L-69"><a href="#L-69"><span class="linenos">69</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+</span><span id="L-70"><a href="#L-70"><span class="linenos">70</span></a>
+</span><span id="L-71"><a href="#L-71"><span class="linenos">71</span></a>
+</span><span id="L-72"><a href="#L-72"><span class="linenos">72</span></a><span class="k">def</span> <span class="nf">replace_non_numeric_values</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+</span><span id="L-73"><a href="#L-73"><span class="linenos">73</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">&#39;?&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;???&#39;</span><span class="p">],[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">])</span>
+</span><span id="L-74"><a href="#L-74"><span class="linenos">74</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+</span><span id="L-75"><a href="#L-75"><span class="linenos">75</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+</span><span id="L-76"><a href="#L-76"><span class="linenos">76</span></a>
+</span><span id="L-77"><a href="#L-77"><span class="linenos">77</span></a>
+</span><span id="L-78"><a href="#L-78"><span class="linenos">78</span></a><span class="k">def</span> <span class="nf">exclude_too_early_explants</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">minimum_in_vivo</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+</span><span id="L-79"><a href="#L-79"><span class="linenos">79</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">FinalEvaluation</span> <span class="o">!=</span> <span class="s1">&#39;new_liner&#39;</span><span class="p">]</span>
+</span><span id="L-80"><a href="#L-80"><span class="linenos">80</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="n">ds</span><span class="o">.</span><span class="n">LengthInVivo</span> <span class="o">&gt;=</span> <span class="n">minimum_in_vivo</span><span class="p">]</span>
+</span><span id="L-81"><a href="#L-81"><span class="linenos">81</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+</span><span id="L-82"><a href="#L-82"><span class="linenos">82</span></a>
+</span><span id="L-83"><a href="#L-83"><span class="linenos">83</span></a>
+</span><span id="L-84"><a href="#L-84"><span class="linenos">84</span></a><span class="k">def</span> <span class="nf">exclude_too_high_oxidations</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">OI_limit</span> <span class="o">=</span> <span class="mi">3</span><span class="p">):</span>
+</span><span id="L-85"><a href="#L-85"><span class="linenos">85</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">OI_max</span> <span class="o">&lt;</span> <span class="n">OI_limit</span><span class="p">]</span>
+</span><span id="L-86"><a href="#L-86"><span class="linenos">86</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -167,23 +188,22 @@
 
     </div>
     <a class="headerlink" href="#add_normalized_OI"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="add_normalized_OI-16"><a href="#add_normalized_OI-16"><span class="linenos">16</span></a><span class="k">def</span> <span class="nf">add_normalized_OI</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-</span><span id="add_normalized_OI-17"><a href="#add_normalized_OI-17"><span class="linenos">17</span></a>    <span class="sd">&#39;&#39;&#39;</span>
-</span><span id="add_normalized_OI-18"><a href="#add_normalized_OI-18"><span class="linenos">18</span></a><span class="sd">    Add normalized OI values to database.</span>
-</span><span id="add_normalized_OI-19"><a href="#add_normalized_OI-19"><span class="linenos">19</span></a><span class="sd">    </span>
-</span><span id="add_normalized_OI-20"><a href="#add_normalized_OI-20"><span class="linenos">20</span></a><span class="sd">    * database = pandas.Dataframe object</span>
-</span><span id="add_normalized_OI-21"><a href="#add_normalized_OI-21"><span class="linenos">21</span></a><span class="sd">    * normalized OI values = OI values divided by LenghtInVivo</span>
-</span><span id="add_normalized_OI-22"><a href="#add_normalized_OI-22"><span class="linenos">22</span></a>
-</span><span id="add_normalized_OI-23"><a href="#add_normalized_OI-23"><span class="linenos">23</span></a><span class="sd">    Parameters</span>
-</span><span id="add_normalized_OI-24"><a href="#add_normalized_OI-24"><span class="linenos">24</span></a><span class="sd">    ----------</span>
-</span><span id="add_normalized_OI-25"><a href="#add_normalized_OI-25"><span class="linenos">25</span></a><span class="sd">    df :  pandas.DataFrame object</span>
-</span><span id="add_normalized_OI-26"><a href="#add_normalized_OI-26"><span class="linenos">26</span></a><span class="sd">        Original database containing all data (from joined XLSX databases).</span>
-</span><span id="add_normalized_OI-27"><a href="#add_normalized_OI-27"><span class="linenos">27</span></a>
-</span><span id="add_normalized_OI-28"><a href="#add_normalized_OI-28"><span class="linenos">28</span></a><span class="sd">    Returns</span>
-</span><span id="add_normalized_OI-29"><a href="#add_normalized_OI-29"><span class="linenos">29</span></a><span class="sd">    -------</span>
-</span><span id="add_normalized_OI-30"><a href="#add_normalized_OI-30"><span class="linenos">30</span></a><span class="sd">    df : pandas.DataFrame object</span>
-</span><span id="add_normalized_OI-31"><a href="#add_normalized_OI-31"><span class="linenos">31</span></a><span class="sd">        Augmented database with newly inserted columns.</span>
-</span><span id="add_normalized_OI-32"><a href="#add_normalized_OI-32"><span class="linenos">32</span></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="add_normalized_OI-17"><a href="#add_normalized_OI-17"><span class="linenos">17</span></a><span class="k">def</span> <span class="nf">add_normalized_OI</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+</span><span id="add_normalized_OI-18"><a href="#add_normalized_OI-18"><span class="linenos">18</span></a>    <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="add_normalized_OI-19"><a href="#add_normalized_OI-19"><span class="linenos">19</span></a><span class="sd">    Add normalized OI values to database.</span>
+</span><span id="add_normalized_OI-20"><a href="#add_normalized_OI-20"><span class="linenos">20</span></a><span class="sd">    </span>
+</span><span id="add_normalized_OI-21"><a href="#add_normalized_OI-21"><span class="linenos">21</span></a><span class="sd">    * database = pandas.Dataframe object</span>
+</span><span id="add_normalized_OI-22"><a href="#add_normalized_OI-22"><span class="linenos">22</span></a><span class="sd">    * normalized OI values = OI values divided by LenghtInVivo</span>
+</span><span id="add_normalized_OI-23"><a href="#add_normalized_OI-23"><span class="linenos">23</span></a>
+</span><span id="add_normalized_OI-24"><a href="#add_normalized_OI-24"><span class="linenos">24</span></a><span class="sd">    Parameters</span>
+</span><span id="add_normalized_OI-25"><a href="#add_normalized_OI-25"><span class="linenos">25</span></a><span class="sd">    ----------</span>
+</span><span id="add_normalized_OI-26"><a href="#add_normalized_OI-26"><span class="linenos">26</span></a><span class="sd">    df :  pandas.DataFrame object</span>
+</span><span id="add_normalized_OI-27"><a href="#add_normalized_OI-27"><span class="linenos">27</span></a><span class="sd">        Original database containing all data (from joined XLSX databases).</span>
+</span><span id="add_normalized_OI-28"><a href="#add_normalized_OI-28"><span class="linenos">28</span></a>
+</span><span id="add_normalized_OI-29"><a href="#add_normalized_OI-29"><span class="linenos">29</span></a><span class="sd">    Returns</span>
+</span><span id="add_normalized_OI-30"><a href="#add_normalized_OI-30"><span class="linenos">30</span></a><span class="sd">    -------</span>
+</span><span id="add_normalized_OI-31"><a href="#add_normalized_OI-31"><span class="linenos">31</span></a><span class="sd">    df : pandas.DataFrame object</span>
+</span><span id="add_normalized_OI-32"><a href="#add_normalized_OI-32"><span class="linenos">32</span></a><span class="sd">        Augmented database with newly inserted columns.</span>
 </span><span id="add_normalized_OI-33"><a href="#add_normalized_OI-33"><span class="linenos">33</span></a><span class="sd">    &#39;&#39;&#39;</span>
 </span><span id="add_normalized_OI-34"><a href="#add_normalized_OI-34"><span class="linenos">34</span></a>    <span class="n">LengthInVivo</span> <span class="o">=</span> <span class="n">replace_non_numeric_values</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">LengthInVivo</span><span class="p">)</span>
 </span><span id="add_normalized_OI-35"><a href="#add_normalized_OI-35"><span class="linenos">35</span></a>    <span class="n">OI_ave_W</span> <span class="o">=</span> <span class="n">replace_non_numeric_values</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">OI_ave_W</span><span class="p">)</span>
@@ -226,25 +246,62 @@ Augmented database with newly inserted columns.</li>
 
 
                 </section>
-                <section id="sub_database_with_nonzero_values">
-                            <input id="sub_database_with_nonzero_values-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+                <section id="subdatabase_without_missing_values">
+                            <input id="subdatabase_without_missing_values-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">sub_database_with_nonzero_values</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">df</span>, </span><span class="param"><span class="n">properties</span></span><span class="return-annotation">):</span></span>
+        <span class="name">subdatabase_without_missing_values</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">df</span>, </span><span class="param"><span class="n">properties</span></span><span class="return-annotation">):</span></span>
 
-                <label class="view-source-button" for="sub_database_with_nonzero_values-view-source"><span>View Source</span></label>
+                <label class="view-source-button" for="subdatabase_without_missing_values-view-source"><span>View Source</span></label>
 
     </div>
-    <a class="headerlink" href="#sub_database_with_nonzero_values"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="sub_database_with_nonzero_values-49"><a href="#sub_database_with_nonzero_values-49"><span class="linenos">49</span></a><span class="k">def</span> <span class="nf">sub_database_with_nonzero_values</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">properties</span><span class="p">):</span>
-</span><span id="sub_database_with_nonzero_values-50"><a href="#sub_database_with_nonzero_values-50"><span class="linenos">50</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">properties</span><span class="p">]</span>
-</span><span id="sub_database_with_nonzero_values-51"><a href="#sub_database_with_nonzero_values-51"><span class="linenos">51</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
-</span><span id="sub_database_with_nonzero_values-52"><a href="#sub_database_with_nonzero_values-52"><span class="linenos">52</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+    <a class="headerlink" href="#subdatabase_without_missing_values"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="subdatabase_without_missing_values-50"><a href="#subdatabase_without_missing_values-50"><span class="linenos">50</span></a><span class="k">def</span> <span class="nf">subdatabase_without_missing_values</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">properties</span><span class="p">):</span>
+</span><span id="subdatabase_without_missing_values-51"><a href="#subdatabase_without_missing_values-51"><span class="linenos">51</span></a>    <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="subdatabase_without_missing_values-52"><a href="#subdatabase_without_missing_values-52"><span class="linenos">52</span></a><span class="sd">    Create a sub-database with selected properties and exclude missing values.</span>
+</span><span id="subdatabase_without_missing_values-53"><a href="#subdatabase_without_missing_values-53"><span class="linenos">53</span></a>
+</span><span id="subdatabase_without_missing_values-54"><a href="#subdatabase_without_missing_values-54"><span class="linenos">54</span></a><span class="sd">    Parameters</span>
+</span><span id="subdatabase_without_missing_values-55"><a href="#subdatabase_without_missing_values-55"><span class="linenos">55</span></a><span class="sd">    ----------</span>
+</span><span id="subdatabase_without_missing_values-56"><a href="#subdatabase_without_missing_values-56"><span class="linenos">56</span></a><span class="sd">    df : pandas.DataFrame object</span>
+</span><span id="subdatabase_without_missing_values-57"><a href="#subdatabase_without_missing_values-57"><span class="linenos">57</span></a><span class="sd">        Database, from which we will select a sub-database.</span>
+</span><span id="subdatabase_without_missing_values-58"><a href="#subdatabase_without_missing_values-58"><span class="linenos">58</span></a><span class="sd">    properties : list of strings</span>
+</span><span id="subdatabase_without_missing_values-59"><a href="#subdatabase_without_missing_values-59"><span class="linenos">59</span></a><span class="sd">        Names of the properties/columns that should be in the sub-database.</span>
+</span><span id="subdatabase_without_missing_values-60"><a href="#subdatabase_without_missing_values-60"><span class="linenos">60</span></a>
+</span><span id="subdatabase_without_missing_values-61"><a href="#subdatabase_without_missing_values-61"><span class="linenos">61</span></a><span class="sd">    Returns</span>
+</span><span id="subdatabase_without_missing_values-62"><a href="#subdatabase_without_missing_values-62"><span class="linenos">62</span></a><span class="sd">    -------</span>
+</span><span id="subdatabase_without_missing_values-63"><a href="#subdatabase_without_missing_values-63"><span class="linenos">63</span></a><span class="sd">    df : pandas.DataFrame object</span>
+</span><span id="subdatabase_without_missing_values-64"><a href="#subdatabase_without_missing_values-64"><span class="linenos">64</span></a><span class="sd">        A sub-database that contains only</span>
+</span><span id="subdatabase_without_missing_values-65"><a href="#subdatabase_without_missing_values-65"><span class="linenos">65</span></a><span class="sd">        selected properties (= selected columns)</span>
+</span><span id="subdatabase_without_missing_values-66"><a href="#subdatabase_without_missing_values-66"><span class="linenos">66</span></a><span class="sd">        and within the selected properties/columns no missing values.</span>
+</span><span id="subdatabase_without_missing_values-67"><a href="#subdatabase_without_missing_values-67"><span class="linenos">67</span></a><span class="sd">    &#39;&#39;&#39;</span>
+</span><span id="subdatabase_without_missing_values-68"><a href="#subdatabase_without_missing_values-68"><span class="linenos">68</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">properties</span><span class="p">]</span>
+</span><span id="subdatabase_without_missing_values-69"><a href="#subdatabase_without_missing_values-69"><span class="linenos">69</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</span><span id="subdatabase_without_missing_values-70"><a href="#subdatabase_without_missing_values-70"><span class="linenos">70</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Create a sub-database with selected properties and exclude missing values.</p>
+
+<h6 id="parameters">Parameters</h6>
+
+<ul>
+<li><strong>df</strong> (pandas.DataFrame object):
+Database, from which we will select a sub-database.</li>
+<li><strong>properties</strong> (list of strings):
+Names of the properties/columns that should be in the sub-database.</li>
+</ul>
+
+<h6 id="returns">Returns</h6>
+
+<ul>
+<li><strong>df</strong> (pandas.DataFrame object):
+A sub-database that contains only
+selected properties (= selected columns)
+and within the selected properties/columns no missing values.</li>
+</ul>
+</div>
+
 
                 </section>
                 <section id="replace_non_numeric_values">
@@ -258,10 +315,10 @@ Augmented database with newly inserted columns.</li>
 
     </div>
     <a class="headerlink" href="#replace_non_numeric_values"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="replace_non_numeric_values-54"><a href="#replace_non_numeric_values-54"><span class="linenos">54</span></a><span class="k">def</span> <span class="nf">replace_non_numeric_values</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-</span><span id="replace_non_numeric_values-55"><a href="#replace_non_numeric_values-55"><span class="linenos">55</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">&#39;?&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;n&#39;</span><span class="p">],[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">])</span>
-</span><span id="replace_non_numeric_values-56"><a href="#replace_non_numeric_values-56"><span class="linenos">56</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
-</span><span id="replace_non_numeric_values-57"><a href="#replace_non_numeric_values-57"><span class="linenos">57</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="replace_non_numeric_values-73"><a href="#replace_non_numeric_values-73"><span class="linenos">73</span></a><span class="k">def</span> <span class="nf">replace_non_numeric_values</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+</span><span id="replace_non_numeric_values-74"><a href="#replace_non_numeric_values-74"><span class="linenos">74</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">&#39;?&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;???&#39;</span><span class="p">],[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">])</span>
+</span><span id="replace_non_numeric_values-75"><a href="#replace_non_numeric_values-75"><span class="linenos">75</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+</span><span id="replace_non_numeric_values-76"><a href="#replace_non_numeric_values-76"><span class="linenos">76</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -279,10 +336,10 @@ Augmented database with newly inserted columns.</li>
 
     </div>
     <a class="headerlink" href="#exclude_too_early_explants"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="exclude_too_early_explants-59"><a href="#exclude_too_early_explants-59"><span class="linenos">59</span></a><span class="k">def</span> <span class="nf">exclude_too_early_explants</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">minimum_in_vivo</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
-</span><span id="exclude_too_early_explants-60"><a href="#exclude_too_early_explants-60"><span class="linenos">60</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">FinalEvaluation</span> <span class="o">!=</span> <span class="s1">&#39;new_liner&#39;</span><span class="p">]</span>
-</span><span id="exclude_too_early_explants-61"><a href="#exclude_too_early_explants-61"><span class="linenos">61</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="n">ds</span><span class="o">.</span><span class="n">LengthInVivo</span> <span class="o">&gt;=</span> <span class="n">minimum_in_vivo</span><span class="p">]</span>
-</span><span id="exclude_too_early_explants-62"><a href="#exclude_too_early_explants-62"><span class="linenos">62</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="exclude_too_early_explants-79"><a href="#exclude_too_early_explants-79"><span class="linenos">79</span></a><span class="k">def</span> <span class="nf">exclude_too_early_explants</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">minimum_in_vivo</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+</span><span id="exclude_too_early_explants-80"><a href="#exclude_too_early_explants-80"><span class="linenos">80</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">FinalEvaluation</span> <span class="o">!=</span> <span class="s1">&#39;new_liner&#39;</span><span class="p">]</span>
+</span><span id="exclude_too_early_explants-81"><a href="#exclude_too_early_explants-81"><span class="linenos">81</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="n">ds</span><span class="o">.</span><span class="n">LengthInVivo</span> <span class="o">&gt;=</span> <span class="n">minimum_in_vivo</span><span class="p">]</span>
+</span><span id="exclude_too_early_explants-82"><a href="#exclude_too_early_explants-82"><span class="linenos">82</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -300,9 +357,9 @@ Augmented database with newly inserted columns.</li>
 
     </div>
     <a class="headerlink" href="#exclude_too_high_oxidations"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="exclude_too_high_oxidations-64"><a href="#exclude_too_high_oxidations-64"><span class="linenos">64</span></a><span class="k">def</span> <span class="nf">exclude_too_high_oxidations</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">OI_limit</span> <span class="o">=</span> <span class="mi">3</span><span class="p">):</span>
-</span><span id="exclude_too_high_oxidations-65"><a href="#exclude_too_high_oxidations-65"><span class="linenos">65</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">OI_max</span> <span class="o">&lt;</span> <span class="n">OI_limit</span><span class="p">]</span>
-</span><span id="exclude_too_high_oxidations-66"><a href="#exclude_too_high_oxidations-66"><span class="linenos">66</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="exclude_too_high_oxidations-85"><a href="#exclude_too_high_oxidations-85"><span class="linenos">85</span></a><span class="k">def</span> <span class="nf">exclude_too_high_oxidations</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">OI_limit</span> <span class="o">=</span> <span class="mi">3</span><span class="p">):</span>
+</span><span id="exclude_too_high_oxidations-86"><a href="#exclude_too_high_oxidations-86"><span class="linenos">86</span></a>    <span class="n">ds</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">OI_max</span> <span class="o">&lt;</span> <span class="n">OI_limit</span><span class="p">]</span>
+</span><span id="exclude_too_high_oxidations-87"><a href="#exclude_too_high_oxidations-87"><span class="linenos">87</span></a>    <span class="k">return</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
 </span></pre></div>
 
 

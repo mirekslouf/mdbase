@@ -39,3 +39,5 @@ Versions of MDBASE
 ------------------
 * Version 0.1 = complete, working, but without documentation
 * Version 0.2 = several minor improvements + basic documentation
+* Version 0.3 = further improvements in both code and documentation
+
