@@ -6,34 +6,25 @@ MDBASE joins and processes data from multiple XLSX databases.
 * The XLSX databases:
     - MS Excel files with similar structure.
     - Similar structure = the same columns names.
-* The joining of databases:
-    - The databases are auto-joined into one pandas.DataFrame object.
 * The processing of joined databases:
 	- Correlations: statistical plots + correlation coefficients and p-values.
 	- Comparisons: boxplots + statistical significance of different groups.
 * Example of usage and more details:
-	- *Polymers*, submitted (revisions requested).
-	- If you use MCREEP in your research, **please cite** the publication above.
+	- *Polymers* 15 (2023) 568.
+	  [https://doi.org/10.3390/polym15030568](https://doi.org/10.3390/polym15030568)
+	- If you use MDBASE in your research, **please cite** the publication above.
 
 Quick start
 -----------
-1. Installation: `pip install mdbase`
-2. Introductory examples: see
-   [GitHub Pages](https://mirekslouf.github.io/mdbase/docs).
+* TODO; at the moment, you can see
+  [GitHub Pages](https://mirekslouf.github.io/mdbase/docs).
 
 Installation, documentation and examples
 ----------------------------------------
-* MDBASE is available at
-  [PyPI](https://pypi.org/project/mdbase/)
-  &rArr; installation: `pip install mdbase`
-* Home page of the project is at
-  [GitHub](https://github.com/mirekslouf/mdbase/) 
-  and [GitHub pages](https://mirekslouf.github.io/mdbase/).
-* [Docs and examples](https://mirekslouf.github.io/mdbase/docs/)
-  are summarized at GitHub pages.
-* All modules, classes and functions are documented by docstrings.
-* [Full documentation](https://mirekslouf.github.io/mdbase/docs/pdoc.html/index.html)
-  was auto-generated from docstrings by [PDoc](https://pdoc.dev).
+* [PyPI](https://pypi.org/project/mdbase/) repository.
+* [GitHub](https://github.com/mirekslouf/mdbase/) repository. 
+* [GitHub pages](https://mirekslouf.github.io/mdbase/) with
+  [documentation](https://mirekslouf.github.io/mdbase/docs/).
 
 Versions of MDBASE
 ------------------
