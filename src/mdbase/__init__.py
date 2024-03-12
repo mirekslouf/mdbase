@@ -1,7 +1,13 @@
 '''
 mdbase package
 --------------
-Join and proces multiple XLSX files.
+Join and proces multiple XLS files.
+
+List of modules:
+
+* mdbase.io = read multiple XLS files into one single pandas.DataFrame
+* mdbase.data = additional, auxiliary functions for data in pandas.DataFrame
+* mdbase.stats = key module; statistical calculations and plotting of the data
 
 Simple and minimalistic, but real and working example:
 
@@ -9,13 +15,13 @@ Simple and minimalistic, but real and working example:
 >>> 
 >>> import mdbase.io, mdbase.stats
 >>> 
->>> # Define directory with databases + XLSX database files
->>> DDIR  = r'../'
->>> DBASE1 = DDIR + r'DBASE/CZ/database_cz_2023-09-20.xlsx'
->>> DBASE2 = DDIR + r'DBASE/IT/database_it_2023-02-15.xlsx'
->>> DBASE3 = DDIR + r'DBASE/ES/database_es_2023-02-15.xlsx'
+>>> # Define directory with databases + XLS database files
+>>> DDIR  = r'../../'
+>>> DBASE1 = DDIR + r'DBASE/CZ/database_cz_2024-03-11.xlsm'
+>>> DBASE2 = DDIR + r'DBASE/IT/database_it_2024-03-11.xlsm'
+>>> DBASE3 = DDIR + r'DBASE/ES/database_es_2024-03-11.xlsm'
 >>> 
->>> # Join all XLSX databases into one pandas.DataFrame object
+>>> # Join all XLS databases into one pandas.DataFrame object
 >>> df = mdbase.io.read_multiple_databases(
 >>>     excel_files=[DBASE1,DBASE2,DBASE3],
 >>>     sheet_names=['HIPs','KNEEs'])
@@ -31,4 +37,4 @@ Simple and minimalistic, but real and working example:
 >>> CPLOT.save('corr_oi-ci.py.png')
 '''
 
-__version__ = "0.3.2"
+__version__ = "0.3.3"

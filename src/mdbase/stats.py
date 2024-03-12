@@ -267,7 +267,8 @@ class CorrelationPlot:
             self.ax = ax
     
         
-    def correlation(self, P1, P2, category=None, marker='rx', label=None):
+    def correlation(self, P1, P2, category=None,
+                    marker='rx', alpha=1, label=None):
         '''
         Add a XY-correlation to CorrelationPlot
         (one plot can contain several XY-correlations).
@@ -285,8 +286,11 @@ class CorrelationPlot:
             Example:
             To plot only THR data, call the function as:
             `CorrelationPlot.correlation(P1,P2,category=(df.Itype=='THR'))`
-        marker : TYPE, optional
-            DESCRIPTION. The default is 'rx'.
+        marker : str, optional, default is 'rx'
+            Marker of the data, matplotlib string format.
+            Examples: 'rx' = red cross, 'bs' = blue square ...
+        alpha : float in interval 0--1, optional, default is 1
+            Transparency of the markers; 1 = non-transparent.
         label : TYPE, optional
             DESCRIPTION. The default is None.
 
@@ -301,7 +305,7 @@ class CorrelationPlot:
             ds = self.df
         else:
             ds = self.df[category]
-        self.ax.plot(ds[P1], ds[P2], marker, label=label)
+        self.ax.plot(ds[P1], ds[P2], marker, alpha=alpha, label=label)
 
     
     def regression(self, P1, P2, category=None, 
@@ -1018,10 +1022,12 @@ class CorrelationMatrixTable:
             fig.tight_layout()
 
 
-    def save(self,
-             output_table_r='default', output_table_p='default', dpi=300):
-        PlotSaver.save(output_table_r, dpi)
-        PlotSaver.save(output_table_p, dpi)
+    def save(self, 
+             output_r='cmatrix_1r.py.png', 
+             output_p='cmatrix_2p.py.png',
+             dpi=300):
+        self.fig1.savefig(output_r, dpi=dpi)
+        self.fig2.savefig(output_p, dpi=dpi)
 
 
 

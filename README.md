@@ -1,9 +1,9 @@
 MDBASE
 ------
 
-MDBASE joins and processes data from multiple XLSX databases.
+MDBASE joins and processes data from multiple XLS databases.
 
-* The XLSX databases:
+* The XLS databases:
     - MS Excel files with similar structure.
     - Similar structure = the same columns names.
 * The processing of joined databases:

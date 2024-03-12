@@ -1,5 +1,16 @@
 Copyright (c) 2018 The Python Packaging Authority
 
+If you use MDBASE package in your research, please cite:
+
+Slouf M, Gajdosova V, Dybal J, Sticha R, Fulin P, Pokorny D,
+Mateo J, Panisello JJ, Canales V, Medel F,
+Bistolfi Alessandro, Bracco Pierangiola:
+European Database of Explanted UHMWPE Liners from Total
+Joint Replacements: Correlations among Polymer
+Modifications, Structure, Oxidation, Mechanical Properties
+and Lifetime In Vivo
+Polymers 15 (2023) 568. https://doi.org/10.3390/polym15030568
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights

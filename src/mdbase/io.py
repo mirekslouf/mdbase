@@ -3,11 +3,11 @@ mdbase.io
 ---------
 Input/output functions for package MDBASE.
 
-* MDBASE joins multiple XLSX databases into one pandas.DataFrame object.
-* This module provides functions for XLSX inputs and TXT outputs.
+* This module contains functions/classes for input and output.
+* 1st group of functions: combine multiple XLS data into one pandas.DataFrame
+* 2nd group of functions = methods of Logger class: print text on stdout + file 
 '''
 
-    
 import sys,os
 import numpy as np
 import pandas as pd
@@ -16,12 +16,12 @@ import pandas as pd
 def read_single_database(
         excel_file, sheet_name, skiprows=3, delipidation=True):
     '''
-    Read a single sheet from a single XLSX file to a pandas.DataFrame.
+    Read a single sheet from a single XLS file to a pandas.DataFrame.
 
     Parameters
     ----------
     excel_file : str or pathlike object
-        Name of the XLSX file.
+        Name of the XLS file.
     sheet_name : str
         Name of the sheet containing the data.
     skiprows : int, optional, default is 3
@@ -34,7 +34,7 @@ def read_single_database(
     Returns
     -------
     df : pandas.DataFrame object
-        The XLSX sheet read into the dataframe.
+        The XLS sheet read into the dataframe.
     '''
     
     # Read file pandas.DataFrame and try to catch possible errors/exceptions
@@ -61,15 +61,16 @@ def read_single_database(
     # Return pd.DataFrame
     return(df)
 
+
 def read_multiple_databases(
         excel_files, sheet_names, skiprows=3, delipidation=True):
     '''
-    Read multiple XLSX files with multiple sheets to a pandas.DataFrame.
+    Read multiple XLS files with multiple sheets to a pandas.DataFrame.
 
     Parameters
     ----------
     excel_files : list of strings or pathlike objects
-        Name of the XLSX files.
+        Name of the XLS files.
     sheet_names : list of strings
         Name of the sheets containing the data.
     skiprows : int, optional, default is 3
@@ -82,7 +83,7 @@ def read_multiple_databases(
     Returns
     -------
     df : pandas.DataFrame object
-        The XLSX files/sheets read into one dataframe.
+        The XLS files/sheets read into one dataframe.
     '''
     
     # Create empty dataframe
@@ -91,12 +92,18 @@ def read_multiple_databases(
     # Read and add data from all excel_files and sheet_names
     for file in excel_files:
         for sheet in sheet_names:
-            temp = read_single_database(file, sheet, skiprows, delipidation)
-            df = pd.concat([df, temp], ignore_index=True)
+            # Read given file/sheet combination to temporary dataframe
+            temp_df = read_single_database(file, sheet, skiprows, delipidation)
+            # Exclude empty columns from the newly read dataframe
+            # (reason: concatenation of df's with empty columns is deprecated
+            temp_df = temp_df.dropna(axis='columns',how='all')
+            # If temp_df is not empty, concatenate the databases
+            # (reason: concatenation of empty df's is deprecated
+            if not(temp_df.empty):
+                df = pd.concat([df, temp_df], ignore_index=True)
     
     # Return the final combined database
     return(df)
-
 
 
 class Logger(object):
