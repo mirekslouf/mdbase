@@ -1123,8 +1123,17 @@ class BoxPlot:
         None.
 
         '''
+        # Boxplot parameters below are somewhat confusing - brief summary:
+        # (boxplots are rather flexible, this is just one of the possibilities
+        # X = column in df containing categorical data -> X-axis
+        # Y = column in df containing numerical data (such as OI_max) -> Y-axis
+        # hue = color of X-data => here: number of colors = number of X-data
+        # legend=False => no legend -> default here, but it is good to specify)
+        # order = order of data in X-axis -> here: order = categories order
+        # palette = definition of colors -> no of colors = no of categories
+        # width, ax = clear: width of columns and ax-object = where to plot
         sns.boxplot(
-            data=self.df, x=x, y=y,
+            data=self.df, x=x, y=y, hue=x, legend=False,
             order=categories, palette=colors, width=0.5, ax=self.ax)
 
     
