@@ -1361,158 +1361,167 @@
 </span><span id="L-1123"><a href="#L-1123"><span class="linenos">1123</span></a><span class="sd">        None.</span>
 </span><span id="L-1124"><a href="#L-1124"><span class="linenos">1124</span></a>
 </span><span id="L-1125"><a href="#L-1125"><span class="linenos">1125</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="L-1126"><a href="#L-1126"><span class="linenos">1126</span></a>        <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
-</span><span id="L-1127"><a href="#L-1127"><span class="linenos">1127</span></a>            <span class="n">data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span>
-</span><span id="L-1128"><a href="#L-1128"><span class="linenos">1128</span></a>            <span class="n">order</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="p">)</span>
-</span><span id="L-1129"><a href="#L-1129"><span class="linenos">1129</span></a>
-</span><span id="L-1130"><a href="#L-1130"><span class="linenos">1130</span></a>    
-</span><span id="L-1131"><a href="#L-1131"><span class="linenos">1131</span></a>    <span class="k">def</span> <span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_label</span><span class="p">,</span> <span class="n">xpos</span><span class="o">=-</span><span class="mf">0.30</span><span class="p">,</span> <span class="n">ypos</span><span class="o">=</span><span class="mf">1.00</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-</span><span id="L-1132"><a href="#L-1132"><span class="linenos">1132</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
-</span><span id="L-1133"><a href="#L-1133"><span class="linenos">1133</span></a><span class="sd">        Add a short one-letter label to upper left corner of the graph.</span>
-</span><span id="L-1134"><a href="#L-1134"><span class="linenos">1134</span></a><span class="sd">        </span>
-</span><span id="L-1135"><a href="#L-1135"><span class="linenos">1135</span></a><span class="sd">        Parameters</span>
-</span><span id="L-1136"><a href="#L-1136"><span class="linenos">1136</span></a><span class="sd">        ----------</span>
-</span><span id="L-1137"><a href="#L-1137"><span class="linenos">1137</span></a><span class="sd">        plot_label : str</span>
-</span><span id="L-1138"><a href="#L-1138"><span class="linenos">1138</span></a><span class="sd">            A one letter label, such as &#39;a&#39;,&#39;b&#39;, ...</span>
-</span><span id="L-1139"><a href="#L-1139"><span class="linenos">1139</span></a><span class="sd">        xpos : float, optional, default is -0.30</span>
-</span><span id="L-1140"><a href="#L-1140"><span class="linenos">1140</span></a><span class="sd">            X-position of the label.</span>
-</span><span id="L-1141"><a href="#L-1141"><span class="linenos">1141</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
-</span><span id="L-1142"><a href="#L-1142"><span class="linenos">1142</span></a><span class="sd">        ypos : float, optional, default is 1.00</span>
-</span><span id="L-1143"><a href="#L-1143"><span class="linenos">1143</span></a><span class="sd">            X-position of the label.</span>
-</span><span id="L-1144"><a href="#L-1144"><span class="linenos">1144</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
-</span><span id="L-1145"><a href="#L-1145"><span class="linenos">1145</span></a><span class="sd">        fontsize : int, optional, default is 10</span>
-</span><span id="L-1146"><a href="#L-1146"><span class="linenos">1146</span></a><span class="sd">            Font size of the label.</span>
-</span><span id="L-1147"><a href="#L-1147"><span class="linenos">1147</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
-</span><span id="L-1148"><a href="#L-1148"><span class="linenos">1148</span></a><span class="sd">        </span>
-</span><span id="L-1149"><a href="#L-1149"><span class="linenos">1149</span></a><span class="sd">        Returns</span>
-</span><span id="L-1150"><a href="#L-1150"><span class="linenos">1150</span></a><span class="sd">        -------</span>
-</span><span id="L-1151"><a href="#L-1151"><span class="linenos">1151</span></a><span class="sd">        None</span>
-</span><span id="L-1152"><a href="#L-1152"><span class="linenos">1152</span></a><span class="sd">            The output is the plot-with-label saved in self/BoxPlot object.</span>
-</span><span id="L-1153"><a href="#L-1153"><span class="linenos">1153</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="L-1154"><a href="#L-1154"><span class="linenos">1154</span></a>        
-</span><span id="L-1155"><a href="#L-1155"><span class="linenos">1155</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">xpos</span><span class="p">,</span> <span class="n">ypos</span><span class="p">,</span> <span class="n">plot_label</span><span class="p">,</span>
-</span><span id="L-1156"><a href="#L-1156"><span class="linenos">1156</span></a>            <span class="n">fontsize</span><span class="o">=</span><span class="n">fontsize</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">)</span>
-</span><span id="L-1157"><a href="#L-1157"><span class="linenos">1157</span></a>
-</span><span id="L-1158"><a href="#L-1158"><span class="linenos">1158</span></a>    
-</span><span id="L-1159"><a href="#L-1159"><span class="linenos">1159</span></a>    <span class="k">def</span> <span class="nf">finalize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">xlabelpad</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylabelpad</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-</span><span id="L-1160"><a href="#L-1160"><span class="linenos">1160</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
-</span><span id="L-1161"><a href="#L-1161"><span class="linenos">1161</span></a><span class="sd">        Finalize boxplot (add XY-labels, apply labelpads ...).</span>
-</span><span id="L-1162"><a href="#L-1162"><span class="linenos">1162</span></a>
-</span><span id="L-1163"><a href="#L-1163"><span class="linenos">1163</span></a><span class="sd">        Parameters</span>
-</span><span id="L-1164"><a href="#L-1164"><span class="linenos">1164</span></a><span class="sd">        ----------</span>
-</span><span id="L-1165"><a href="#L-1165"><span class="linenos">1165</span></a><span class="sd">        xlabel : str</span>
-</span><span id="L-1166"><a href="#L-1166"><span class="linenos">1166</span></a><span class="sd">            X-axis main label (in addition to X category labels).</span>
-</span><span id="L-1167"><a href="#L-1167"><span class="linenos">1167</span></a><span class="sd">        ylabel : str</span>
-</span><span id="L-1168"><a href="#L-1168"><span class="linenos">1168</span></a><span class="sd">            Y-axis main label (in addition to Y numerical values)</span>
-</span><span id="L-1169"><a href="#L-1169"><span class="linenos">1169</span></a><span class="sd">        xlabelpad : float, optional, the default is None</span>
-</span><span id="L-1170"><a href="#L-1170"><span class="linenos">1170</span></a><span class="sd">            Distance between xlabel and the plot edge.</span>
-</span><span id="L-1171"><a href="#L-1171"><span class="linenos">1171</span></a><span class="sd">            If not given, the default matplotlib-estimated distance is used.</span>
-</span><span id="L-1172"><a href="#L-1172"><span class="linenos">1172</span></a><span class="sd">        ylabelpad : float, optional, the default is None</span>
-</span><span id="L-1173"><a href="#L-1173"><span class="linenos">1173</span></a><span class="sd">            Distance between ylabel and the plot edge.</span>
-</span><span id="L-1174"><a href="#L-1174"><span class="linenos">1174</span></a><span class="sd">            If not given, the default matplotlib-estimated distance is used.</span>
-</span><span id="L-1175"><a href="#L-1175"><span class="linenos">1175</span></a>
-</span><span id="L-1176"><a href="#L-1176"><span class="linenos">1176</span></a><span class="sd">        Returns</span>
-</span><span id="L-1177"><a href="#L-1177"><span class="linenos">1177</span></a><span class="sd">        -------</span>
-</span><span id="L-1178"><a href="#L-1178"><span class="linenos">1178</span></a><span class="sd">        None</span>
-</span><span id="L-1179"><a href="#L-1179"><span class="linenos">1179</span></a><span class="sd">            The output is the finalized plot saved in self/BoxPlot object.</span>
-</span><span id="L-1180"><a href="#L-1180"><span class="linenos">1180</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="L-1181"><a href="#L-1181"><span class="linenos">1181</span></a>        
-</span><span id="L-1182"><a href="#L-1182"><span class="linenos">1182</span></a>        <span class="c1"># Add X,Y labels (and take xlabelpad,ylabelpad into account)</span>
-</span><span id="L-1183"><a href="#L-1183"><span class="linenos">1183</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">xlabel</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="n">xlabelpad</span><span class="p">)</span>
-</span><span id="L-1184"><a href="#L-1184"><span class="linenos">1184</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">ylabel</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="n">ylabelpad</span><span class="p">)</span> 
-</span><span id="L-1185"><a href="#L-1185"><span class="linenos">1185</span></a>        
-</span><span id="L-1186"><a href="#L-1186"><span class="linenos">1186</span></a>        <span class="c1"># Add grid (and ensure that it is BELOW boxes in the boxplot</span>
-</span><span id="L-1187"><a href="#L-1187"><span class="linenos">1187</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_axisbelow</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="L-1188"><a href="#L-1188"><span class="linenos">1188</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-</span><span id="L-1189"><a href="#L-1189"><span class="linenos">1189</span></a>        
-</span><span id="L-1190"><a href="#L-1190"><span class="linenos">1190</span></a>        <span class="c1"># Apply tight_layout to figure</span>
-</span><span id="L-1191"><a href="#L-1191"><span class="linenos">1191</span></a>        <span class="c1"># (if the figure is defined = if we create standalone plot</span>
-</span><span id="L-1192"><a href="#L-1192"><span class="linenos">1192</span></a>        <span class="c1"># (in case of multiple plots, we create just axes, not the whole fig</span>
-</span><span id="L-1193"><a href="#L-1193"><span class="linenos">1193</span></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span> 
-</span><span id="L-1194"><a href="#L-1194"><span class="linenos">1194</span></a>            <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-</span><span id="L-1195"><a href="#L-1195"><span class="linenos">1195</span></a>
-</span><span id="L-1196"><a href="#L-1196"><span class="linenos">1196</span></a>    
-</span><span id="L-1197"><a href="#L-1197"><span class="linenos">1197</span></a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_graph</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">):</span>
-</span><span id="L-1198"><a href="#L-1198"><span class="linenos">1198</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
-</span><span id="L-1199"><a href="#L-1199"><span class="linenos">1199</span></a><span class="sd">        Save boxplot to image file.</span>
-</span><span id="L-1200"><a href="#L-1200"><span class="linenos">1200</span></a>
-</span><span id="L-1201"><a href="#L-1201"><span class="linenos">1201</span></a><span class="sd">        Parameters</span>
-</span><span id="L-1202"><a href="#L-1202"><span class="linenos">1202</span></a><span class="sd">        ----------</span>
-</span><span id="L-1203"><a href="#L-1203"><span class="linenos">1203</span></a><span class="sd">        output_graph : str, optional, default is &#39;default&#39;</span>
-</span><span id="L-1204"><a href="#L-1204"><span class="linenos">1204</span></a><span class="sd">            Name of the output graph, such as &#39;my_plot.png&#39;.</span>
-</span><span id="L-1205"><a href="#L-1205"><span class="linenos">1205</span></a><span class="sd">            If not given, some suitable default filename will be created.</span>
-</span><span id="L-1206"><a href="#L-1206"><span class="linenos">1206</span></a><span class="sd">        dpi : int, optional, default is 300</span>
-</span><span id="L-1207"><a href="#L-1207"><span class="linenos">1207</span></a><span class="sd">            DPI resolution of the saved plot.</span>
-</span><span id="L-1208"><a href="#L-1208"><span class="linenos">1208</span></a><span class="sd">            </span>
-</span><span id="L-1209"><a href="#L-1209"><span class="linenos">1209</span></a><span class="sd">        Returns</span>
-</span><span id="L-1210"><a href="#L-1210"><span class="linenos">1210</span></a><span class="sd">        -------</span>
-</span><span id="L-1211"><a href="#L-1211"><span class="linenos">1211</span></a><span class="sd">        None</span>
-</span><span id="L-1212"><a href="#L-1212"><span class="linenos">1212</span></a><span class="sd">            The output is the plot saved in a file.</span>
-</span><span id="L-1213"><a href="#L-1213"><span class="linenos">1213</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="L-1214"><a href="#L-1214"><span class="linenos">1214</span></a>        
-</span><span id="L-1215"><a href="#L-1215"><span class="linenos">1215</span></a>        <span class="c1"># Boxplots can be used in multiplots (although it is not typical).</span>
-</span><span id="L-1216"><a href="#L-1216"><span class="linenos">1216</span></a>        <span class="c1"># * If the plot IS NOT a part of a multiplot (= plt object),</span>
-</span><span id="L-1217"><a href="#L-1217"><span class="linenos">1217</span></a>        <span class="c1">#   it can be saved here,</span>
-</span><span id="L-1218"><a href="#L-1218"><span class="linenos">1218</span></a>        <span class="c1">#   because in such a case it represents an individual file.</span>
-</span><span id="L-1219"><a href="#L-1219"><span class="linenos">1219</span></a>        <span class="c1"># * If the plot IS a part of a multiplot  (= ax object of a fig object)</span>
-</span><span id="L-1220"><a href="#L-1220"><span class="linenos">1220</span></a>        <span class="c1">#   it cannot be saved here, because it does not make sense.</span>
-</span><span id="L-1221"><a href="#L-1221"><span class="linenos">1221</span></a>        <span class="c1">#   Instead, you typically save the whole fig at the end of the script,</span>
-</span><span id="L-1222"><a href="#L-1222"><span class="linenos">1222</span></a>        
-</span><span id="L-1223"><a href="#L-1223"><span class="linenos">1223</span></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-1224"><a href="#L-1224"><span class="linenos">1224</span></a>            <span class="c1"># Figure is NOT a part of multiplot - Ok to save to file.</span>
-</span><span id="L-1225"><a href="#L-1225"><span class="linenos">1225</span></a>            <span class="c1"># For saving, we use a universal external function,</span>
-</span><span id="L-1226"><a href="#L-1226"><span class="linenos">1226</span></a>            <span class="c1"># to avoid code repetition - saving is the same for all plot types.</span>
-</span><span id="L-1227"><a href="#L-1227"><span class="linenos">1227</span></a>            <span class="n">PlotSaver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">output_graph</span><span class="p">,</span> <span class="n">dpi</span><span class="p">)</span>
-</span><span id="L-1228"><a href="#L-1228"><span class="linenos">1228</span></a>        <span class="k">else</span><span class="p">:</span>
-</span><span id="L-1229"><a href="#L-1229"><span class="linenos">1229</span></a>            <span class="c1"># Figure is a part of multiplot =&gt; just print warning.</span>
-</span><span id="L-1230"><a href="#L-1230"><span class="linenos">1230</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The plot is a part of a multiplot.&#39;</span><span class="p">)</span>
-</span><span id="L-1231"><a href="#L-1231"><span class="linenos">1231</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;It makes no sense to save individual subplots.&#39;</span><span class="p">)</span>
-</span><span id="L-1232"><a href="#L-1232"><span class="linenos">1232</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Function ignored =&gt; save the whole figure instead!&#39;</span><span class="p">)</span>
-</span><span id="L-1233"><a href="#L-1233"><span class="linenos">1233</span></a>
-</span><span id="L-1234"><a href="#L-1234"><span class="linenos">1234</span></a>
-</span><span id="L-1235"><a href="#L-1235"><span class="linenos">1235</span></a>    <span class="k">def</span> <span class="nf">statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">CATS</span><span class="p">,</span> <span class="n">output_stats</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">):</span>
-</span><span id="L-1236"><a href="#L-1236"><span class="linenos">1236</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
-</span><span id="L-1237"><a href="#L-1237"><span class="linenos">1237</span></a><span class="sd">        Calculate and save boxplot statistics to text file.</span>
-</span><span id="L-1238"><a href="#L-1238"><span class="linenos">1238</span></a>
-</span><span id="L-1239"><a href="#L-1239"><span class="linenos">1239</span></a><span class="sd">        Parameters</span>
-</span><span id="L-1240"><a href="#L-1240"><span class="linenos">1240</span></a><span class="sd">        ----------</span>
-</span><span id="L-1241"><a href="#L-1241"><span class="linenos">1241</span></a><span class="sd">        X : str</span>
-</span><span id="L-1242"><a href="#L-1242"><span class="linenos">1242</span></a><span class="sd">            Name of X-variable = column in a Dataframe (such as Sterilization),</span>
-</span><span id="L-1243"><a href="#L-1243"><span class="linenos">1243</span></a><span class="sd">            which contains categorical data.</span>
-</span><span id="L-1244"><a href="#L-1244"><span class="linenos">1244</span></a><span class="sd">        Y : str</span>
-</span><span id="L-1245"><a href="#L-1245"><span class="linenos">1245</span></a><span class="sd">            Name of Y-variable = column in a DataFrame (such as OI_max),</span>
-</span><span id="L-1246"><a href="#L-1246"><span class="linenos">1246</span></a><span class="sd">            which contains numerical data.</span>
-</span><span id="L-1247"><a href="#L-1247"><span class="linenos">1247</span></a><span class="sd">        CATS : list</span>
-</span><span id="L-1248"><a href="#L-1248"><span class="linenos">1248</span></a><span class="sd">            Names of categories = values in a Dataframe (such as [&#39;IRR,&#39;EtO&#39;]),</span>
-</span><span id="L-1249"><a href="#L-1249"><span class="linenos">1249</span></a><span class="sd">            which should be compared.</span>
-</span><span id="L-1250"><a href="#L-1250"><span class="linenos">1250</span></a><span class="sd">        output_stats : str, optional, default is &#39;default&#39;</span>
-</span><span id="L-1251"><a href="#L-1251"><span class="linenos">1251</span></a><span class="sd">            Name of the output text file with statistics.</span>
-</span><span id="L-1252"><a href="#L-1252"><span class="linenos">1252</span></a><span class="sd">            If &#39;default&#39; the name will be (input_script_name + .txt).</span>
-</span><span id="L-1253"><a href="#L-1253"><span class="linenos">1253</span></a><span class="sd">            </span>
-</span><span id="L-1254"><a href="#L-1254"><span class="linenos">1254</span></a><span class="sd">        Returns</span>
-</span><span id="L-1255"><a href="#L-1255"><span class="linenos">1255</span></a><span class="sd">        -------</span>
-</span><span id="L-1256"><a href="#L-1256"><span class="linenos">1256</span></a><span class="sd">        None</span>
-</span><span id="L-1257"><a href="#L-1257"><span class="linenos">1257</span></a><span class="sd">            The output is the calculated statistics</span>
-</span><span id="L-1258"><a href="#L-1258"><span class="linenos">1258</span></a><span class="sd">            on the screen and in the text file (with name = output_stats).</span>
-</span><span id="L-1259"><a href="#L-1259"><span class="linenos">1259</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="L-1260"><a href="#L-1260"><span class="linenos">1260</span></a>        <span class="c1"># Name of TXT file with output statistics that corresponds to BoxPlot</span>
-</span><span id="L-1261"><a href="#L-1261"><span class="linenos">1261</span></a>        <span class="k">if</span> <span class="n">output_stats</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="n">output_stats</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;.txt&#39;</span>
-</span><span id="L-1262"><a href="#L-1262"><span class="linenos">1262</span></a>        <span class="c1"># Start writing to both standard output and output_stats file</span>
-</span><span id="L-1263"><a href="#L-1263"><span class="linenos">1263</span></a>        <span class="n">logfile</span> <span class="o">=</span> <span class="n">mio</span><span class="o">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">output_stats</span><span class="p">)</span>
-</span><span id="L-1264"><a href="#L-1264"><span class="linenos">1264</span></a>        <span class="c1"># Calulate and print statistics</span>
-</span><span id="L-1265"><a href="#L-1265"><span class="linenos">1265</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correlation matrix table (p-values)&#39;</span><span class="p">)</span>
-</span><span id="L-1266"><a href="#L-1266"><span class="linenos">1266</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----------------------------------&#39;</span><span class="p">)</span>
-</span><span id="L-1267"><a href="#L-1267"><span class="linenos">1267</span></a>        <span class="k">for</span> <span class="n">category1</span> <span class="ow">in</span> <span class="n">CATS</span><span class="p">:</span>
-</span><span id="L-1268"><a href="#L-1268"><span class="linenos">1268</span></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">category1</span><span class="si">:</span><span class="s1">12s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span><span id="L-1269"><a href="#L-1269"><span class="linenos">1269</span></a>            <span class="k">for</span> <span class="n">category2</span> <span class="ow">in</span> <span class="n">CATS</span><span class="p">:</span>
-</span><span id="L-1270"><a href="#L-1270"><span class="linenos">1270</span></a>                <span class="n">xdata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">Y</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="o">==</span> <span class="n">category1</span><span class="p">]</span>
-</span><span id="L-1271"><a href="#L-1271"><span class="linenos">1271</span></a>                <span class="n">ydata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">Y</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="o">==</span> <span class="n">category2</span><span class="p">]</span>
-</span><span id="L-1272"><a href="#L-1272"><span class="linenos">1272</span></a>                <span class="n">t</span><span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="n">equal_var</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-</span><span id="L-1273"><a href="#L-1273"><span class="linenos">1273</span></a>                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s1">8.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-</span><span id="L-1274"><a href="#L-1274"><span class="linenos">1274</span></a>            <span class="nb">print</span><span class="p">()</span>
-</span><span id="L-1275"><a href="#L-1275"><span class="linenos">1275</span></a>        <span class="c1"># Close dual output</span>
-</span><span id="L-1276"><a href="#L-1276"><span class="linenos">1276</span></a>        <span class="n">logfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</span><span id="L-1277"><a href="#L-1277"><span class="linenos">1277</span></a>    
+</span><span id="L-1126"><a href="#L-1126"><span class="linenos">1126</span></a>        <span class="c1"># Boxplot parameters below are somewhat confusing - brief summary:</span>
+</span><span id="L-1127"><a href="#L-1127"><span class="linenos">1127</span></a>        <span class="c1"># (boxplots are rather flexible, this is just one of the possibilities</span>
+</span><span id="L-1128"><a href="#L-1128"><span class="linenos">1128</span></a>        <span class="c1"># X = column in df containing categorical data -&gt; X-axis</span>
+</span><span id="L-1129"><a href="#L-1129"><span class="linenos">1129</span></a>        <span class="c1"># Y = column in df containing numerical data (such as OI_max) -&gt; Y-axis</span>
+</span><span id="L-1130"><a href="#L-1130"><span class="linenos">1130</span></a>        <span class="c1"># hue = color of X-data =&gt; here: number of colors = number of X-data</span>
+</span><span id="L-1131"><a href="#L-1131"><span class="linenos">1131</span></a>        <span class="c1"># legend=False =&gt; no legend -&gt; default here, but it is good to specify)</span>
+</span><span id="L-1132"><a href="#L-1132"><span class="linenos">1132</span></a>        <span class="c1"># order = order of data in X-axis -&gt; here: order = categories order</span>
+</span><span id="L-1133"><a href="#L-1133"><span class="linenos">1133</span></a>        <span class="c1"># palette = definition of colors -&gt; no of colors = no of categories</span>
+</span><span id="L-1134"><a href="#L-1134"><span class="linenos">1134</span></a>        <span class="c1"># width, ax = clear: width of columns and ax-object = where to plot</span>
+</span><span id="L-1135"><a href="#L-1135"><span class="linenos">1135</span></a>        <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+</span><span id="L-1136"><a href="#L-1136"><span class="linenos">1136</span></a>            <span class="n">data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+</span><span id="L-1137"><a href="#L-1137"><span class="linenos">1137</span></a>            <span class="n">order</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="p">)</span>
+</span><span id="L-1138"><a href="#L-1138"><span class="linenos">1138</span></a>
+</span><span id="L-1139"><a href="#L-1139"><span class="linenos">1139</span></a>    
+</span><span id="L-1140"><a href="#L-1140"><span class="linenos">1140</span></a>    <span class="k">def</span> <span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_label</span><span class="p">,</span> <span class="n">xpos</span><span class="o">=-</span><span class="mf">0.30</span><span class="p">,</span> <span class="n">ypos</span><span class="o">=</span><span class="mf">1.00</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+</span><span id="L-1141"><a href="#L-1141"><span class="linenos">1141</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-1142"><a href="#L-1142"><span class="linenos">1142</span></a><span class="sd">        Add a short one-letter label to upper left corner of the graph.</span>
+</span><span id="L-1143"><a href="#L-1143"><span class="linenos">1143</span></a><span class="sd">        </span>
+</span><span id="L-1144"><a href="#L-1144"><span class="linenos">1144</span></a><span class="sd">        Parameters</span>
+</span><span id="L-1145"><a href="#L-1145"><span class="linenos">1145</span></a><span class="sd">        ----------</span>
+</span><span id="L-1146"><a href="#L-1146"><span class="linenos">1146</span></a><span class="sd">        plot_label : str</span>
+</span><span id="L-1147"><a href="#L-1147"><span class="linenos">1147</span></a><span class="sd">            A one letter label, such as &#39;a&#39;,&#39;b&#39;, ...</span>
+</span><span id="L-1148"><a href="#L-1148"><span class="linenos">1148</span></a><span class="sd">        xpos : float, optional, default is -0.30</span>
+</span><span id="L-1149"><a href="#L-1149"><span class="linenos">1149</span></a><span class="sd">            X-position of the label.</span>
+</span><span id="L-1150"><a href="#L-1150"><span class="linenos">1150</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
+</span><span id="L-1151"><a href="#L-1151"><span class="linenos">1151</span></a><span class="sd">        ypos : float, optional, default is 1.00</span>
+</span><span id="L-1152"><a href="#L-1152"><span class="linenos">1152</span></a><span class="sd">            X-position of the label.</span>
+</span><span id="L-1153"><a href="#L-1153"><span class="linenos">1153</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
+</span><span id="L-1154"><a href="#L-1154"><span class="linenos">1154</span></a><span class="sd">        fontsize : int, optional, default is 10</span>
+</span><span id="L-1155"><a href="#L-1155"><span class="linenos">1155</span></a><span class="sd">            Font size of the label.</span>
+</span><span id="L-1156"><a href="#L-1156"><span class="linenos">1156</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
+</span><span id="L-1157"><a href="#L-1157"><span class="linenos">1157</span></a><span class="sd">        </span>
+</span><span id="L-1158"><a href="#L-1158"><span class="linenos">1158</span></a><span class="sd">        Returns</span>
+</span><span id="L-1159"><a href="#L-1159"><span class="linenos">1159</span></a><span class="sd">        -------</span>
+</span><span id="L-1160"><a href="#L-1160"><span class="linenos">1160</span></a><span class="sd">        None</span>
+</span><span id="L-1161"><a href="#L-1161"><span class="linenos">1161</span></a><span class="sd">            The output is the plot-with-label saved in self/BoxPlot object.</span>
+</span><span id="L-1162"><a href="#L-1162"><span class="linenos">1162</span></a><span class="sd">        &#39;&#39;&#39;</span>
+</span><span id="L-1163"><a href="#L-1163"><span class="linenos">1163</span></a>        
+</span><span id="L-1164"><a href="#L-1164"><span class="linenos">1164</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">xpos</span><span class="p">,</span> <span class="n">ypos</span><span class="p">,</span> <span class="n">plot_label</span><span class="p">,</span>
+</span><span id="L-1165"><a href="#L-1165"><span class="linenos">1165</span></a>            <span class="n">fontsize</span><span class="o">=</span><span class="n">fontsize</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">)</span>
+</span><span id="L-1166"><a href="#L-1166"><span class="linenos">1166</span></a>
+</span><span id="L-1167"><a href="#L-1167"><span class="linenos">1167</span></a>    
+</span><span id="L-1168"><a href="#L-1168"><span class="linenos">1168</span></a>    <span class="k">def</span> <span class="nf">finalize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">xlabelpad</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylabelpad</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span><span id="L-1169"><a href="#L-1169"><span class="linenos">1169</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-1170"><a href="#L-1170"><span class="linenos">1170</span></a><span class="sd">        Finalize boxplot (add XY-labels, apply labelpads ...).</span>
+</span><span id="L-1171"><a href="#L-1171"><span class="linenos">1171</span></a>
+</span><span id="L-1172"><a href="#L-1172"><span class="linenos">1172</span></a><span class="sd">        Parameters</span>
+</span><span id="L-1173"><a href="#L-1173"><span class="linenos">1173</span></a><span class="sd">        ----------</span>
+</span><span id="L-1174"><a href="#L-1174"><span class="linenos">1174</span></a><span class="sd">        xlabel : str</span>
+</span><span id="L-1175"><a href="#L-1175"><span class="linenos">1175</span></a><span class="sd">            X-axis main label (in addition to X category labels).</span>
+</span><span id="L-1176"><a href="#L-1176"><span class="linenos">1176</span></a><span class="sd">        ylabel : str</span>
+</span><span id="L-1177"><a href="#L-1177"><span class="linenos">1177</span></a><span class="sd">            Y-axis main label (in addition to Y numerical values)</span>
+</span><span id="L-1178"><a href="#L-1178"><span class="linenos">1178</span></a><span class="sd">        xlabelpad : float, optional, the default is None</span>
+</span><span id="L-1179"><a href="#L-1179"><span class="linenos">1179</span></a><span class="sd">            Distance between xlabel and the plot edge.</span>
+</span><span id="L-1180"><a href="#L-1180"><span class="linenos">1180</span></a><span class="sd">            If not given, the default matplotlib-estimated distance is used.</span>
+</span><span id="L-1181"><a href="#L-1181"><span class="linenos">1181</span></a><span class="sd">        ylabelpad : float, optional, the default is None</span>
+</span><span id="L-1182"><a href="#L-1182"><span class="linenos">1182</span></a><span class="sd">            Distance between ylabel and the plot edge.</span>
+</span><span id="L-1183"><a href="#L-1183"><span class="linenos">1183</span></a><span class="sd">            If not given, the default matplotlib-estimated distance is used.</span>
+</span><span id="L-1184"><a href="#L-1184"><span class="linenos">1184</span></a>
+</span><span id="L-1185"><a href="#L-1185"><span class="linenos">1185</span></a><span class="sd">        Returns</span>
+</span><span id="L-1186"><a href="#L-1186"><span class="linenos">1186</span></a><span class="sd">        -------</span>
+</span><span id="L-1187"><a href="#L-1187"><span class="linenos">1187</span></a><span class="sd">        None</span>
+</span><span id="L-1188"><a href="#L-1188"><span class="linenos">1188</span></a><span class="sd">            The output is the finalized plot saved in self/BoxPlot object.</span>
+</span><span id="L-1189"><a href="#L-1189"><span class="linenos">1189</span></a><span class="sd">        &#39;&#39;&#39;</span>
+</span><span id="L-1190"><a href="#L-1190"><span class="linenos">1190</span></a>        
+</span><span id="L-1191"><a href="#L-1191"><span class="linenos">1191</span></a>        <span class="c1"># Add X,Y labels (and take xlabelpad,ylabelpad into account)</span>
+</span><span id="L-1192"><a href="#L-1192"><span class="linenos">1192</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">xlabel</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="n">xlabelpad</span><span class="p">)</span>
+</span><span id="L-1193"><a href="#L-1193"><span class="linenos">1193</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">ylabel</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="n">ylabelpad</span><span class="p">)</span> 
+</span><span id="L-1194"><a href="#L-1194"><span class="linenos">1194</span></a>        
+</span><span id="L-1195"><a href="#L-1195"><span class="linenos">1195</span></a>        <span class="c1"># Add grid (and ensure that it is BELOW boxes in the boxplot</span>
+</span><span id="L-1196"><a href="#L-1196"><span class="linenos">1196</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_axisbelow</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="L-1197"><a href="#L-1197"><span class="linenos">1197</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</span><span id="L-1198"><a href="#L-1198"><span class="linenos">1198</span></a>        
+</span><span id="L-1199"><a href="#L-1199"><span class="linenos">1199</span></a>        <span class="c1"># Apply tight_layout to figure</span>
+</span><span id="L-1200"><a href="#L-1200"><span class="linenos">1200</span></a>        <span class="c1"># (if the figure is defined = if we create standalone plot</span>
+</span><span id="L-1201"><a href="#L-1201"><span class="linenos">1201</span></a>        <span class="c1"># (in case of multiple plots, we create just axes, not the whole fig</span>
+</span><span id="L-1202"><a href="#L-1202"><span class="linenos">1202</span></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span> 
+</span><span id="L-1203"><a href="#L-1203"><span class="linenos">1203</span></a>            <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="L-1204"><a href="#L-1204"><span class="linenos">1204</span></a>
+</span><span id="L-1205"><a href="#L-1205"><span class="linenos">1205</span></a>    
+</span><span id="L-1206"><a href="#L-1206"><span class="linenos">1206</span></a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_graph</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">):</span>
+</span><span id="L-1207"><a href="#L-1207"><span class="linenos">1207</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-1208"><a href="#L-1208"><span class="linenos">1208</span></a><span class="sd">        Save boxplot to image file.</span>
+</span><span id="L-1209"><a href="#L-1209"><span class="linenos">1209</span></a>
+</span><span id="L-1210"><a href="#L-1210"><span class="linenos">1210</span></a><span class="sd">        Parameters</span>
+</span><span id="L-1211"><a href="#L-1211"><span class="linenos">1211</span></a><span class="sd">        ----------</span>
+</span><span id="L-1212"><a href="#L-1212"><span class="linenos">1212</span></a><span class="sd">        output_graph : str, optional, default is &#39;default&#39;</span>
+</span><span id="L-1213"><a href="#L-1213"><span class="linenos">1213</span></a><span class="sd">            Name of the output graph, such as &#39;my_plot.png&#39;.</span>
+</span><span id="L-1214"><a href="#L-1214"><span class="linenos">1214</span></a><span class="sd">            If not given, some suitable default filename will be created.</span>
+</span><span id="L-1215"><a href="#L-1215"><span class="linenos">1215</span></a><span class="sd">        dpi : int, optional, default is 300</span>
+</span><span id="L-1216"><a href="#L-1216"><span class="linenos">1216</span></a><span class="sd">            DPI resolution of the saved plot.</span>
+</span><span id="L-1217"><a href="#L-1217"><span class="linenos">1217</span></a><span class="sd">            </span>
+</span><span id="L-1218"><a href="#L-1218"><span class="linenos">1218</span></a><span class="sd">        Returns</span>
+</span><span id="L-1219"><a href="#L-1219"><span class="linenos">1219</span></a><span class="sd">        -------</span>
+</span><span id="L-1220"><a href="#L-1220"><span class="linenos">1220</span></a><span class="sd">        None</span>
+</span><span id="L-1221"><a href="#L-1221"><span class="linenos">1221</span></a><span class="sd">            The output is the plot saved in a file.</span>
+</span><span id="L-1222"><a href="#L-1222"><span class="linenos">1222</span></a><span class="sd">        &#39;&#39;&#39;</span>
+</span><span id="L-1223"><a href="#L-1223"><span class="linenos">1223</span></a>        
+</span><span id="L-1224"><a href="#L-1224"><span class="linenos">1224</span></a>        <span class="c1"># Boxplots can be used in multiplots (although it is not typical).</span>
+</span><span id="L-1225"><a href="#L-1225"><span class="linenos">1225</span></a>        <span class="c1"># * If the plot IS NOT a part of a multiplot (= plt object),</span>
+</span><span id="L-1226"><a href="#L-1226"><span class="linenos">1226</span></a>        <span class="c1">#   it can be saved here,</span>
+</span><span id="L-1227"><a href="#L-1227"><span class="linenos">1227</span></a>        <span class="c1">#   because in such a case it represents an individual file.</span>
+</span><span id="L-1228"><a href="#L-1228"><span class="linenos">1228</span></a>        <span class="c1"># * If the plot IS a part of a multiplot  (= ax object of a fig object)</span>
+</span><span id="L-1229"><a href="#L-1229"><span class="linenos">1229</span></a>        <span class="c1">#   it cannot be saved here, because it does not make sense.</span>
+</span><span id="L-1230"><a href="#L-1230"><span class="linenos">1230</span></a>        <span class="c1">#   Instead, you typically save the whole fig at the end of the script,</span>
+</span><span id="L-1231"><a href="#L-1231"><span class="linenos">1231</span></a>        
+</span><span id="L-1232"><a href="#L-1232"><span class="linenos">1232</span></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="L-1233"><a href="#L-1233"><span class="linenos">1233</span></a>            <span class="c1"># Figure is NOT a part of multiplot - Ok to save to file.</span>
+</span><span id="L-1234"><a href="#L-1234"><span class="linenos">1234</span></a>            <span class="c1"># For saving, we use a universal external function,</span>
+</span><span id="L-1235"><a href="#L-1235"><span class="linenos">1235</span></a>            <span class="c1"># to avoid code repetition - saving is the same for all plot types.</span>
+</span><span id="L-1236"><a href="#L-1236"><span class="linenos">1236</span></a>            <span class="n">PlotSaver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">output_graph</span><span class="p">,</span> <span class="n">dpi</span><span class="p">)</span>
+</span><span id="L-1237"><a href="#L-1237"><span class="linenos">1237</span></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="L-1238"><a href="#L-1238"><span class="linenos">1238</span></a>            <span class="c1"># Figure is a part of multiplot =&gt; just print warning.</span>
+</span><span id="L-1239"><a href="#L-1239"><span class="linenos">1239</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The plot is a part of a multiplot.&#39;</span><span class="p">)</span>
+</span><span id="L-1240"><a href="#L-1240"><span class="linenos">1240</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;It makes no sense to save individual subplots.&#39;</span><span class="p">)</span>
+</span><span id="L-1241"><a href="#L-1241"><span class="linenos">1241</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Function ignored =&gt; save the whole figure instead!&#39;</span><span class="p">)</span>
+</span><span id="L-1242"><a href="#L-1242"><span class="linenos">1242</span></a>
+</span><span id="L-1243"><a href="#L-1243"><span class="linenos">1243</span></a>
+</span><span id="L-1244"><a href="#L-1244"><span class="linenos">1244</span></a>    <span class="k">def</span> <span class="nf">statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">CATS</span><span class="p">,</span> <span class="n">output_stats</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">):</span>
+</span><span id="L-1245"><a href="#L-1245"><span class="linenos">1245</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-1246"><a href="#L-1246"><span class="linenos">1246</span></a><span class="sd">        Calculate and save boxplot statistics to text file.</span>
+</span><span id="L-1247"><a href="#L-1247"><span class="linenos">1247</span></a>
+</span><span id="L-1248"><a href="#L-1248"><span class="linenos">1248</span></a><span class="sd">        Parameters</span>
+</span><span id="L-1249"><a href="#L-1249"><span class="linenos">1249</span></a><span class="sd">        ----------</span>
+</span><span id="L-1250"><a href="#L-1250"><span class="linenos">1250</span></a><span class="sd">        X : str</span>
+</span><span id="L-1251"><a href="#L-1251"><span class="linenos">1251</span></a><span class="sd">            Name of X-variable = column in a Dataframe (such as Sterilization),</span>
+</span><span id="L-1252"><a href="#L-1252"><span class="linenos">1252</span></a><span class="sd">            which contains categorical data.</span>
+</span><span id="L-1253"><a href="#L-1253"><span class="linenos">1253</span></a><span class="sd">        Y : str</span>
+</span><span id="L-1254"><a href="#L-1254"><span class="linenos">1254</span></a><span class="sd">            Name of Y-variable = column in a DataFrame (such as OI_max),</span>
+</span><span id="L-1255"><a href="#L-1255"><span class="linenos">1255</span></a><span class="sd">            which contains numerical data.</span>
+</span><span id="L-1256"><a href="#L-1256"><span class="linenos">1256</span></a><span class="sd">        CATS : list</span>
+</span><span id="L-1257"><a href="#L-1257"><span class="linenos">1257</span></a><span class="sd">            Names of categories = values in a Dataframe (such as [&#39;IRR,&#39;EtO&#39;]),</span>
+</span><span id="L-1258"><a href="#L-1258"><span class="linenos">1258</span></a><span class="sd">            which should be compared.</span>
+</span><span id="L-1259"><a href="#L-1259"><span class="linenos">1259</span></a><span class="sd">        output_stats : str, optional, default is &#39;default&#39;</span>
+</span><span id="L-1260"><a href="#L-1260"><span class="linenos">1260</span></a><span class="sd">            Name of the output text file with statistics.</span>
+</span><span id="L-1261"><a href="#L-1261"><span class="linenos">1261</span></a><span class="sd">            If &#39;default&#39; the name will be (input_script_name + .txt).</span>
+</span><span id="L-1262"><a href="#L-1262"><span class="linenos">1262</span></a><span class="sd">            </span>
+</span><span id="L-1263"><a href="#L-1263"><span class="linenos">1263</span></a><span class="sd">        Returns</span>
+</span><span id="L-1264"><a href="#L-1264"><span class="linenos">1264</span></a><span class="sd">        -------</span>
+</span><span id="L-1265"><a href="#L-1265"><span class="linenos">1265</span></a><span class="sd">        None</span>
+</span><span id="L-1266"><a href="#L-1266"><span class="linenos">1266</span></a><span class="sd">            The output is the calculated statistics</span>
+</span><span id="L-1267"><a href="#L-1267"><span class="linenos">1267</span></a><span class="sd">            on the screen and in the text file (with name = output_stats).</span>
+</span><span id="L-1268"><a href="#L-1268"><span class="linenos">1268</span></a><span class="sd">        &#39;&#39;&#39;</span>
+</span><span id="L-1269"><a href="#L-1269"><span class="linenos">1269</span></a>        <span class="c1"># Name of TXT file with output statistics that corresponds to BoxPlot</span>
+</span><span id="L-1270"><a href="#L-1270"><span class="linenos">1270</span></a>        <span class="k">if</span> <span class="n">output_stats</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="n">output_stats</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;.txt&#39;</span>
+</span><span id="L-1271"><a href="#L-1271"><span class="linenos">1271</span></a>        <span class="c1"># Start writing to both standard output and output_stats file</span>
+</span><span id="L-1272"><a href="#L-1272"><span class="linenos">1272</span></a>        <span class="n">logfile</span> <span class="o">=</span> <span class="n">mio</span><span class="o">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">output_stats</span><span class="p">)</span>
+</span><span id="L-1273"><a href="#L-1273"><span class="linenos">1273</span></a>        <span class="c1"># Calulate and print statistics</span>
+</span><span id="L-1274"><a href="#L-1274"><span class="linenos">1274</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correlation matrix table (p-values)&#39;</span><span class="p">)</span>
+</span><span id="L-1275"><a href="#L-1275"><span class="linenos">1275</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----------------------------------&#39;</span><span class="p">)</span>
+</span><span id="L-1276"><a href="#L-1276"><span class="linenos">1276</span></a>        <span class="k">for</span> <span class="n">category1</span> <span class="ow">in</span> <span class="n">CATS</span><span class="p">:</span>
+</span><span id="L-1277"><a href="#L-1277"><span class="linenos">1277</span></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">category1</span><span class="si">:</span><span class="s1">12s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</span><span id="L-1278"><a href="#L-1278"><span class="linenos">1278</span></a>            <span class="k">for</span> <span class="n">category2</span> <span class="ow">in</span> <span class="n">CATS</span><span class="p">:</span>
+</span><span id="L-1279"><a href="#L-1279"><span class="linenos">1279</span></a>                <span class="n">xdata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">Y</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="o">==</span> <span class="n">category1</span><span class="p">]</span>
+</span><span id="L-1280"><a href="#L-1280"><span class="linenos">1280</span></a>                <span class="n">ydata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">Y</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="o">==</span> <span class="n">category2</span><span class="p">]</span>
+</span><span id="L-1281"><a href="#L-1281"><span class="linenos">1281</span></a>                <span class="n">t</span><span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="n">equal_var</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</span><span id="L-1282"><a href="#L-1282"><span class="linenos">1282</span></a>                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s1">8.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</span><span id="L-1283"><a href="#L-1283"><span class="linenos">1283</span></a>            <span class="nb">print</span><span class="p">()</span>
+</span><span id="L-1284"><a href="#L-1284"><span class="linenos">1284</span></a>        <span class="c1"># Close dual output</span>
+</span><span id="L-1285"><a href="#L-1285"><span class="linenos">1285</span></a>        <span class="n">logfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span id="L-1286"><a href="#L-1286"><span class="linenos">1286</span></a>    
 </span></pre></div>
 
 
@@ -4234,157 +4243,166 @@ They can be finalized (self.finalize) and saved (self.save) later.</li>
 </span><span id="BoxPlot-1124"><a href="#BoxPlot-1124"><span class="linenos">1124</span></a><span class="sd">        None.</span>
 </span><span id="BoxPlot-1125"><a href="#BoxPlot-1125"><span class="linenos">1125</span></a>
 </span><span id="BoxPlot-1126"><a href="#BoxPlot-1126"><span class="linenos">1126</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="BoxPlot-1127"><a href="#BoxPlot-1127"><span class="linenos">1127</span></a>        <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
-</span><span id="BoxPlot-1128"><a href="#BoxPlot-1128"><span class="linenos">1128</span></a>            <span class="n">data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span>
-</span><span id="BoxPlot-1129"><a href="#BoxPlot-1129"><span class="linenos">1129</span></a>            <span class="n">order</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="p">)</span>
-</span><span id="BoxPlot-1130"><a href="#BoxPlot-1130"><span class="linenos">1130</span></a>
-</span><span id="BoxPlot-1131"><a href="#BoxPlot-1131"><span class="linenos">1131</span></a>    
-</span><span id="BoxPlot-1132"><a href="#BoxPlot-1132"><span class="linenos">1132</span></a>    <span class="k">def</span> <span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_label</span><span class="p">,</span> <span class="n">xpos</span><span class="o">=-</span><span class="mf">0.30</span><span class="p">,</span> <span class="n">ypos</span><span class="o">=</span><span class="mf">1.00</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-</span><span id="BoxPlot-1133"><a href="#BoxPlot-1133"><span class="linenos">1133</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
-</span><span id="BoxPlot-1134"><a href="#BoxPlot-1134"><span class="linenos">1134</span></a><span class="sd">        Add a short one-letter label to upper left corner of the graph.</span>
-</span><span id="BoxPlot-1135"><a href="#BoxPlot-1135"><span class="linenos">1135</span></a><span class="sd">        </span>
-</span><span id="BoxPlot-1136"><a href="#BoxPlot-1136"><span class="linenos">1136</span></a><span class="sd">        Parameters</span>
-</span><span id="BoxPlot-1137"><a href="#BoxPlot-1137"><span class="linenos">1137</span></a><span class="sd">        ----------</span>
-</span><span id="BoxPlot-1138"><a href="#BoxPlot-1138"><span class="linenos">1138</span></a><span class="sd">        plot_label : str</span>
-</span><span id="BoxPlot-1139"><a href="#BoxPlot-1139"><span class="linenos">1139</span></a><span class="sd">            A one letter label, such as &#39;a&#39;,&#39;b&#39;, ...</span>
-</span><span id="BoxPlot-1140"><a href="#BoxPlot-1140"><span class="linenos">1140</span></a><span class="sd">        xpos : float, optional, default is -0.30</span>
-</span><span id="BoxPlot-1141"><a href="#BoxPlot-1141"><span class="linenos">1141</span></a><span class="sd">            X-position of the label.</span>
-</span><span id="BoxPlot-1142"><a href="#BoxPlot-1142"><span class="linenos">1142</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
-</span><span id="BoxPlot-1143"><a href="#BoxPlot-1143"><span class="linenos">1143</span></a><span class="sd">        ypos : float, optional, default is 1.00</span>
-</span><span id="BoxPlot-1144"><a href="#BoxPlot-1144"><span class="linenos">1144</span></a><span class="sd">            X-position of the label.</span>
-</span><span id="BoxPlot-1145"><a href="#BoxPlot-1145"><span class="linenos">1145</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
-</span><span id="BoxPlot-1146"><a href="#BoxPlot-1146"><span class="linenos">1146</span></a><span class="sd">        fontsize : int, optional, default is 10</span>
-</span><span id="BoxPlot-1147"><a href="#BoxPlot-1147"><span class="linenos">1147</span></a><span class="sd">            Font size of the label.</span>
-</span><span id="BoxPlot-1148"><a href="#BoxPlot-1148"><span class="linenos">1148</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
-</span><span id="BoxPlot-1149"><a href="#BoxPlot-1149"><span class="linenos">1149</span></a><span class="sd">        </span>
-</span><span id="BoxPlot-1150"><a href="#BoxPlot-1150"><span class="linenos">1150</span></a><span class="sd">        Returns</span>
-</span><span id="BoxPlot-1151"><a href="#BoxPlot-1151"><span class="linenos">1151</span></a><span class="sd">        -------</span>
-</span><span id="BoxPlot-1152"><a href="#BoxPlot-1152"><span class="linenos">1152</span></a><span class="sd">        None</span>
-</span><span id="BoxPlot-1153"><a href="#BoxPlot-1153"><span class="linenos">1153</span></a><span class="sd">            The output is the plot-with-label saved in self/BoxPlot object.</span>
-</span><span id="BoxPlot-1154"><a href="#BoxPlot-1154"><span class="linenos">1154</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="BoxPlot-1155"><a href="#BoxPlot-1155"><span class="linenos">1155</span></a>        
-</span><span id="BoxPlot-1156"><a href="#BoxPlot-1156"><span class="linenos">1156</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">xpos</span><span class="p">,</span> <span class="n">ypos</span><span class="p">,</span> <span class="n">plot_label</span><span class="p">,</span>
-</span><span id="BoxPlot-1157"><a href="#BoxPlot-1157"><span class="linenos">1157</span></a>            <span class="n">fontsize</span><span class="o">=</span><span class="n">fontsize</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">)</span>
-</span><span id="BoxPlot-1158"><a href="#BoxPlot-1158"><span class="linenos">1158</span></a>
-</span><span id="BoxPlot-1159"><a href="#BoxPlot-1159"><span class="linenos">1159</span></a>    
-</span><span id="BoxPlot-1160"><a href="#BoxPlot-1160"><span class="linenos">1160</span></a>    <span class="k">def</span> <span class="nf">finalize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">xlabelpad</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylabelpad</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-</span><span id="BoxPlot-1161"><a href="#BoxPlot-1161"><span class="linenos">1161</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
-</span><span id="BoxPlot-1162"><a href="#BoxPlot-1162"><span class="linenos">1162</span></a><span class="sd">        Finalize boxplot (add XY-labels, apply labelpads ...).</span>
-</span><span id="BoxPlot-1163"><a href="#BoxPlot-1163"><span class="linenos">1163</span></a>
-</span><span id="BoxPlot-1164"><a href="#BoxPlot-1164"><span class="linenos">1164</span></a><span class="sd">        Parameters</span>
-</span><span id="BoxPlot-1165"><a href="#BoxPlot-1165"><span class="linenos">1165</span></a><span class="sd">        ----------</span>
-</span><span id="BoxPlot-1166"><a href="#BoxPlot-1166"><span class="linenos">1166</span></a><span class="sd">        xlabel : str</span>
-</span><span id="BoxPlot-1167"><a href="#BoxPlot-1167"><span class="linenos">1167</span></a><span class="sd">            X-axis main label (in addition to X category labels).</span>
-</span><span id="BoxPlot-1168"><a href="#BoxPlot-1168"><span class="linenos">1168</span></a><span class="sd">        ylabel : str</span>
-</span><span id="BoxPlot-1169"><a href="#BoxPlot-1169"><span class="linenos">1169</span></a><span class="sd">            Y-axis main label (in addition to Y numerical values)</span>
-</span><span id="BoxPlot-1170"><a href="#BoxPlot-1170"><span class="linenos">1170</span></a><span class="sd">        xlabelpad : float, optional, the default is None</span>
-</span><span id="BoxPlot-1171"><a href="#BoxPlot-1171"><span class="linenos">1171</span></a><span class="sd">            Distance between xlabel and the plot edge.</span>
-</span><span id="BoxPlot-1172"><a href="#BoxPlot-1172"><span class="linenos">1172</span></a><span class="sd">            If not given, the default matplotlib-estimated distance is used.</span>
-</span><span id="BoxPlot-1173"><a href="#BoxPlot-1173"><span class="linenos">1173</span></a><span class="sd">        ylabelpad : float, optional, the default is None</span>
-</span><span id="BoxPlot-1174"><a href="#BoxPlot-1174"><span class="linenos">1174</span></a><span class="sd">            Distance between ylabel and the plot edge.</span>
-</span><span id="BoxPlot-1175"><a href="#BoxPlot-1175"><span class="linenos">1175</span></a><span class="sd">            If not given, the default matplotlib-estimated distance is used.</span>
-</span><span id="BoxPlot-1176"><a href="#BoxPlot-1176"><span class="linenos">1176</span></a>
-</span><span id="BoxPlot-1177"><a href="#BoxPlot-1177"><span class="linenos">1177</span></a><span class="sd">        Returns</span>
-</span><span id="BoxPlot-1178"><a href="#BoxPlot-1178"><span class="linenos">1178</span></a><span class="sd">        -------</span>
-</span><span id="BoxPlot-1179"><a href="#BoxPlot-1179"><span class="linenos">1179</span></a><span class="sd">        None</span>
-</span><span id="BoxPlot-1180"><a href="#BoxPlot-1180"><span class="linenos">1180</span></a><span class="sd">            The output is the finalized plot saved in self/BoxPlot object.</span>
-</span><span id="BoxPlot-1181"><a href="#BoxPlot-1181"><span class="linenos">1181</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="BoxPlot-1182"><a href="#BoxPlot-1182"><span class="linenos">1182</span></a>        
-</span><span id="BoxPlot-1183"><a href="#BoxPlot-1183"><span class="linenos">1183</span></a>        <span class="c1"># Add X,Y labels (and take xlabelpad,ylabelpad into account)</span>
-</span><span id="BoxPlot-1184"><a href="#BoxPlot-1184"><span class="linenos">1184</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">xlabel</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="n">xlabelpad</span><span class="p">)</span>
-</span><span id="BoxPlot-1185"><a href="#BoxPlot-1185"><span class="linenos">1185</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">ylabel</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="n">ylabelpad</span><span class="p">)</span> 
-</span><span id="BoxPlot-1186"><a href="#BoxPlot-1186"><span class="linenos">1186</span></a>        
-</span><span id="BoxPlot-1187"><a href="#BoxPlot-1187"><span class="linenos">1187</span></a>        <span class="c1"># Add grid (and ensure that it is BELOW boxes in the boxplot</span>
-</span><span id="BoxPlot-1188"><a href="#BoxPlot-1188"><span class="linenos">1188</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_axisbelow</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="BoxPlot-1189"><a href="#BoxPlot-1189"><span class="linenos">1189</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-</span><span id="BoxPlot-1190"><a href="#BoxPlot-1190"><span class="linenos">1190</span></a>        
-</span><span id="BoxPlot-1191"><a href="#BoxPlot-1191"><span class="linenos">1191</span></a>        <span class="c1"># Apply tight_layout to figure</span>
-</span><span id="BoxPlot-1192"><a href="#BoxPlot-1192"><span class="linenos">1192</span></a>        <span class="c1"># (if the figure is defined = if we create standalone plot</span>
-</span><span id="BoxPlot-1193"><a href="#BoxPlot-1193"><span class="linenos">1193</span></a>        <span class="c1"># (in case of multiple plots, we create just axes, not the whole fig</span>
-</span><span id="BoxPlot-1194"><a href="#BoxPlot-1194"><span class="linenos">1194</span></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span> 
-</span><span id="BoxPlot-1195"><a href="#BoxPlot-1195"><span class="linenos">1195</span></a>            <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-</span><span id="BoxPlot-1196"><a href="#BoxPlot-1196"><span class="linenos">1196</span></a>
-</span><span id="BoxPlot-1197"><a href="#BoxPlot-1197"><span class="linenos">1197</span></a>    
-</span><span id="BoxPlot-1198"><a href="#BoxPlot-1198"><span class="linenos">1198</span></a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_graph</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">):</span>
-</span><span id="BoxPlot-1199"><a href="#BoxPlot-1199"><span class="linenos">1199</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
-</span><span id="BoxPlot-1200"><a href="#BoxPlot-1200"><span class="linenos">1200</span></a><span class="sd">        Save boxplot to image file.</span>
-</span><span id="BoxPlot-1201"><a href="#BoxPlot-1201"><span class="linenos">1201</span></a>
-</span><span id="BoxPlot-1202"><a href="#BoxPlot-1202"><span class="linenos">1202</span></a><span class="sd">        Parameters</span>
-</span><span id="BoxPlot-1203"><a href="#BoxPlot-1203"><span class="linenos">1203</span></a><span class="sd">        ----------</span>
-</span><span id="BoxPlot-1204"><a href="#BoxPlot-1204"><span class="linenos">1204</span></a><span class="sd">        output_graph : str, optional, default is &#39;default&#39;</span>
-</span><span id="BoxPlot-1205"><a href="#BoxPlot-1205"><span class="linenos">1205</span></a><span class="sd">            Name of the output graph, such as &#39;my_plot.png&#39;.</span>
-</span><span id="BoxPlot-1206"><a href="#BoxPlot-1206"><span class="linenos">1206</span></a><span class="sd">            If not given, some suitable default filename will be created.</span>
-</span><span id="BoxPlot-1207"><a href="#BoxPlot-1207"><span class="linenos">1207</span></a><span class="sd">        dpi : int, optional, default is 300</span>
-</span><span id="BoxPlot-1208"><a href="#BoxPlot-1208"><span class="linenos">1208</span></a><span class="sd">            DPI resolution of the saved plot.</span>
-</span><span id="BoxPlot-1209"><a href="#BoxPlot-1209"><span class="linenos">1209</span></a><span class="sd">            </span>
-</span><span id="BoxPlot-1210"><a href="#BoxPlot-1210"><span class="linenos">1210</span></a><span class="sd">        Returns</span>
-</span><span id="BoxPlot-1211"><a href="#BoxPlot-1211"><span class="linenos">1211</span></a><span class="sd">        -------</span>
-</span><span id="BoxPlot-1212"><a href="#BoxPlot-1212"><span class="linenos">1212</span></a><span class="sd">        None</span>
-</span><span id="BoxPlot-1213"><a href="#BoxPlot-1213"><span class="linenos">1213</span></a><span class="sd">            The output is the plot saved in a file.</span>
-</span><span id="BoxPlot-1214"><a href="#BoxPlot-1214"><span class="linenos">1214</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="BoxPlot-1215"><a href="#BoxPlot-1215"><span class="linenos">1215</span></a>        
-</span><span id="BoxPlot-1216"><a href="#BoxPlot-1216"><span class="linenos">1216</span></a>        <span class="c1"># Boxplots can be used in multiplots (although it is not typical).</span>
-</span><span id="BoxPlot-1217"><a href="#BoxPlot-1217"><span class="linenos">1217</span></a>        <span class="c1"># * If the plot IS NOT a part of a multiplot (= plt object),</span>
-</span><span id="BoxPlot-1218"><a href="#BoxPlot-1218"><span class="linenos">1218</span></a>        <span class="c1">#   it can be saved here,</span>
-</span><span id="BoxPlot-1219"><a href="#BoxPlot-1219"><span class="linenos">1219</span></a>        <span class="c1">#   because in such a case it represents an individual file.</span>
-</span><span id="BoxPlot-1220"><a href="#BoxPlot-1220"><span class="linenos">1220</span></a>        <span class="c1"># * If the plot IS a part of a multiplot  (= ax object of a fig object)</span>
-</span><span id="BoxPlot-1221"><a href="#BoxPlot-1221"><span class="linenos">1221</span></a>        <span class="c1">#   it cannot be saved here, because it does not make sense.</span>
-</span><span id="BoxPlot-1222"><a href="#BoxPlot-1222"><span class="linenos">1222</span></a>        <span class="c1">#   Instead, you typically save the whole fig at the end of the script,</span>
-</span><span id="BoxPlot-1223"><a href="#BoxPlot-1223"><span class="linenos">1223</span></a>        
-</span><span id="BoxPlot-1224"><a href="#BoxPlot-1224"><span class="linenos">1224</span></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BoxPlot-1225"><a href="#BoxPlot-1225"><span class="linenos">1225</span></a>            <span class="c1"># Figure is NOT a part of multiplot - Ok to save to file.</span>
-</span><span id="BoxPlot-1226"><a href="#BoxPlot-1226"><span class="linenos">1226</span></a>            <span class="c1"># For saving, we use a universal external function,</span>
-</span><span id="BoxPlot-1227"><a href="#BoxPlot-1227"><span class="linenos">1227</span></a>            <span class="c1"># to avoid code repetition - saving is the same for all plot types.</span>
-</span><span id="BoxPlot-1228"><a href="#BoxPlot-1228"><span class="linenos">1228</span></a>            <span class="n">PlotSaver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">output_graph</span><span class="p">,</span> <span class="n">dpi</span><span class="p">)</span>
-</span><span id="BoxPlot-1229"><a href="#BoxPlot-1229"><span class="linenos">1229</span></a>        <span class="k">else</span><span class="p">:</span>
-</span><span id="BoxPlot-1230"><a href="#BoxPlot-1230"><span class="linenos">1230</span></a>            <span class="c1"># Figure is a part of multiplot =&gt; just print warning.</span>
-</span><span id="BoxPlot-1231"><a href="#BoxPlot-1231"><span class="linenos">1231</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The plot is a part of a multiplot.&#39;</span><span class="p">)</span>
-</span><span id="BoxPlot-1232"><a href="#BoxPlot-1232"><span class="linenos">1232</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;It makes no sense to save individual subplots.&#39;</span><span class="p">)</span>
-</span><span id="BoxPlot-1233"><a href="#BoxPlot-1233"><span class="linenos">1233</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Function ignored =&gt; save the whole figure instead!&#39;</span><span class="p">)</span>
-</span><span id="BoxPlot-1234"><a href="#BoxPlot-1234"><span class="linenos">1234</span></a>
-</span><span id="BoxPlot-1235"><a href="#BoxPlot-1235"><span class="linenos">1235</span></a>
-</span><span id="BoxPlot-1236"><a href="#BoxPlot-1236"><span class="linenos">1236</span></a>    <span class="k">def</span> <span class="nf">statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">CATS</span><span class="p">,</span> <span class="n">output_stats</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">):</span>
-</span><span id="BoxPlot-1237"><a href="#BoxPlot-1237"><span class="linenos">1237</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
-</span><span id="BoxPlot-1238"><a href="#BoxPlot-1238"><span class="linenos">1238</span></a><span class="sd">        Calculate and save boxplot statistics to text file.</span>
-</span><span id="BoxPlot-1239"><a href="#BoxPlot-1239"><span class="linenos">1239</span></a>
-</span><span id="BoxPlot-1240"><a href="#BoxPlot-1240"><span class="linenos">1240</span></a><span class="sd">        Parameters</span>
-</span><span id="BoxPlot-1241"><a href="#BoxPlot-1241"><span class="linenos">1241</span></a><span class="sd">        ----------</span>
-</span><span id="BoxPlot-1242"><a href="#BoxPlot-1242"><span class="linenos">1242</span></a><span class="sd">        X : str</span>
-</span><span id="BoxPlot-1243"><a href="#BoxPlot-1243"><span class="linenos">1243</span></a><span class="sd">            Name of X-variable = column in a Dataframe (such as Sterilization),</span>
-</span><span id="BoxPlot-1244"><a href="#BoxPlot-1244"><span class="linenos">1244</span></a><span class="sd">            which contains categorical data.</span>
-</span><span id="BoxPlot-1245"><a href="#BoxPlot-1245"><span class="linenos">1245</span></a><span class="sd">        Y : str</span>
-</span><span id="BoxPlot-1246"><a href="#BoxPlot-1246"><span class="linenos">1246</span></a><span class="sd">            Name of Y-variable = column in a DataFrame (such as OI_max),</span>
-</span><span id="BoxPlot-1247"><a href="#BoxPlot-1247"><span class="linenos">1247</span></a><span class="sd">            which contains numerical data.</span>
-</span><span id="BoxPlot-1248"><a href="#BoxPlot-1248"><span class="linenos">1248</span></a><span class="sd">        CATS : list</span>
-</span><span id="BoxPlot-1249"><a href="#BoxPlot-1249"><span class="linenos">1249</span></a><span class="sd">            Names of categories = values in a Dataframe (such as [&#39;IRR,&#39;EtO&#39;]),</span>
-</span><span id="BoxPlot-1250"><a href="#BoxPlot-1250"><span class="linenos">1250</span></a><span class="sd">            which should be compared.</span>
-</span><span id="BoxPlot-1251"><a href="#BoxPlot-1251"><span class="linenos">1251</span></a><span class="sd">        output_stats : str, optional, default is &#39;default&#39;</span>
-</span><span id="BoxPlot-1252"><a href="#BoxPlot-1252"><span class="linenos">1252</span></a><span class="sd">            Name of the output text file with statistics.</span>
-</span><span id="BoxPlot-1253"><a href="#BoxPlot-1253"><span class="linenos">1253</span></a><span class="sd">            If &#39;default&#39; the name will be (input_script_name + .txt).</span>
-</span><span id="BoxPlot-1254"><a href="#BoxPlot-1254"><span class="linenos">1254</span></a><span class="sd">            </span>
-</span><span id="BoxPlot-1255"><a href="#BoxPlot-1255"><span class="linenos">1255</span></a><span class="sd">        Returns</span>
-</span><span id="BoxPlot-1256"><a href="#BoxPlot-1256"><span class="linenos">1256</span></a><span class="sd">        -------</span>
-</span><span id="BoxPlot-1257"><a href="#BoxPlot-1257"><span class="linenos">1257</span></a><span class="sd">        None</span>
-</span><span id="BoxPlot-1258"><a href="#BoxPlot-1258"><span class="linenos">1258</span></a><span class="sd">            The output is the calculated statistics</span>
-</span><span id="BoxPlot-1259"><a href="#BoxPlot-1259"><span class="linenos">1259</span></a><span class="sd">            on the screen and in the text file (with name = output_stats).</span>
-</span><span id="BoxPlot-1260"><a href="#BoxPlot-1260"><span class="linenos">1260</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="BoxPlot-1261"><a href="#BoxPlot-1261"><span class="linenos">1261</span></a>        <span class="c1"># Name of TXT file with output statistics that corresponds to BoxPlot</span>
-</span><span id="BoxPlot-1262"><a href="#BoxPlot-1262"><span class="linenos">1262</span></a>        <span class="k">if</span> <span class="n">output_stats</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="n">output_stats</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;.txt&#39;</span>
-</span><span id="BoxPlot-1263"><a href="#BoxPlot-1263"><span class="linenos">1263</span></a>        <span class="c1"># Start writing to both standard output and output_stats file</span>
-</span><span id="BoxPlot-1264"><a href="#BoxPlot-1264"><span class="linenos">1264</span></a>        <span class="n">logfile</span> <span class="o">=</span> <span class="n">mio</span><span class="o">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">output_stats</span><span class="p">)</span>
-</span><span id="BoxPlot-1265"><a href="#BoxPlot-1265"><span class="linenos">1265</span></a>        <span class="c1"># Calulate and print statistics</span>
-</span><span id="BoxPlot-1266"><a href="#BoxPlot-1266"><span class="linenos">1266</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correlation matrix table (p-values)&#39;</span><span class="p">)</span>
-</span><span id="BoxPlot-1267"><a href="#BoxPlot-1267"><span class="linenos">1267</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----------------------------------&#39;</span><span class="p">)</span>
-</span><span id="BoxPlot-1268"><a href="#BoxPlot-1268"><span class="linenos">1268</span></a>        <span class="k">for</span> <span class="n">category1</span> <span class="ow">in</span> <span class="n">CATS</span><span class="p">:</span>
-</span><span id="BoxPlot-1269"><a href="#BoxPlot-1269"><span class="linenos">1269</span></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">category1</span><span class="si">:</span><span class="s1">12s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span><span id="BoxPlot-1270"><a href="#BoxPlot-1270"><span class="linenos">1270</span></a>            <span class="k">for</span> <span class="n">category2</span> <span class="ow">in</span> <span class="n">CATS</span><span class="p">:</span>
-</span><span id="BoxPlot-1271"><a href="#BoxPlot-1271"><span class="linenos">1271</span></a>                <span class="n">xdata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">Y</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="o">==</span> <span class="n">category1</span><span class="p">]</span>
-</span><span id="BoxPlot-1272"><a href="#BoxPlot-1272"><span class="linenos">1272</span></a>                <span class="n">ydata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">Y</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="o">==</span> <span class="n">category2</span><span class="p">]</span>
-</span><span id="BoxPlot-1273"><a href="#BoxPlot-1273"><span class="linenos">1273</span></a>                <span class="n">t</span><span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="n">equal_var</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-</span><span id="BoxPlot-1274"><a href="#BoxPlot-1274"><span class="linenos">1274</span></a>                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s1">8.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-</span><span id="BoxPlot-1275"><a href="#BoxPlot-1275"><span class="linenos">1275</span></a>            <span class="nb">print</span><span class="p">()</span>
-</span><span id="BoxPlot-1276"><a href="#BoxPlot-1276"><span class="linenos">1276</span></a>        <span class="c1"># Close dual output</span>
-</span><span id="BoxPlot-1277"><a href="#BoxPlot-1277"><span class="linenos">1277</span></a>        <span class="n">logfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span id="BoxPlot-1127"><a href="#BoxPlot-1127"><span class="linenos">1127</span></a>        <span class="c1"># Boxplot parameters below are somewhat confusing - brief summary:</span>
+</span><span id="BoxPlot-1128"><a href="#BoxPlot-1128"><span class="linenos">1128</span></a>        <span class="c1"># (boxplots are rather flexible, this is just one of the possibilities</span>
+</span><span id="BoxPlot-1129"><a href="#BoxPlot-1129"><span class="linenos">1129</span></a>        <span class="c1"># X = column in df containing categorical data -&gt; X-axis</span>
+</span><span id="BoxPlot-1130"><a href="#BoxPlot-1130"><span class="linenos">1130</span></a>        <span class="c1"># Y = column in df containing numerical data (such as OI_max) -&gt; Y-axis</span>
+</span><span id="BoxPlot-1131"><a href="#BoxPlot-1131"><span class="linenos">1131</span></a>        <span class="c1"># hue = color of X-data =&gt; here: number of colors = number of X-data</span>
+</span><span id="BoxPlot-1132"><a href="#BoxPlot-1132"><span class="linenos">1132</span></a>        <span class="c1"># legend=False =&gt; no legend -&gt; default here, but it is good to specify)</span>
+</span><span id="BoxPlot-1133"><a href="#BoxPlot-1133"><span class="linenos">1133</span></a>        <span class="c1"># order = order of data in X-axis -&gt; here: order = categories order</span>
+</span><span id="BoxPlot-1134"><a href="#BoxPlot-1134"><span class="linenos">1134</span></a>        <span class="c1"># palette = definition of colors -&gt; no of colors = no of categories</span>
+</span><span id="BoxPlot-1135"><a href="#BoxPlot-1135"><span class="linenos">1135</span></a>        <span class="c1"># width, ax = clear: width of columns and ax-object = where to plot</span>
+</span><span id="BoxPlot-1136"><a href="#BoxPlot-1136"><span class="linenos">1136</span></a>        <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+</span><span id="BoxPlot-1137"><a href="#BoxPlot-1137"><span class="linenos">1137</span></a>            <span class="n">data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+</span><span id="BoxPlot-1138"><a href="#BoxPlot-1138"><span class="linenos">1138</span></a>            <span class="n">order</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="p">)</span>
+</span><span id="BoxPlot-1139"><a href="#BoxPlot-1139"><span class="linenos">1139</span></a>
+</span><span id="BoxPlot-1140"><a href="#BoxPlot-1140"><span class="linenos">1140</span></a>    
+</span><span id="BoxPlot-1141"><a href="#BoxPlot-1141"><span class="linenos">1141</span></a>    <span class="k">def</span> <span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_label</span><span class="p">,</span> <span class="n">xpos</span><span class="o">=-</span><span class="mf">0.30</span><span class="p">,</span> <span class="n">ypos</span><span class="o">=</span><span class="mf">1.00</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+</span><span id="BoxPlot-1142"><a href="#BoxPlot-1142"><span class="linenos">1142</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BoxPlot-1143"><a href="#BoxPlot-1143"><span class="linenos">1143</span></a><span class="sd">        Add a short one-letter label to upper left corner of the graph.</span>
+</span><span id="BoxPlot-1144"><a href="#BoxPlot-1144"><span class="linenos">1144</span></a><span class="sd">        </span>
+</span><span id="BoxPlot-1145"><a href="#BoxPlot-1145"><span class="linenos">1145</span></a><span class="sd">        Parameters</span>
+</span><span id="BoxPlot-1146"><a href="#BoxPlot-1146"><span class="linenos">1146</span></a><span class="sd">        ----------</span>
+</span><span id="BoxPlot-1147"><a href="#BoxPlot-1147"><span class="linenos">1147</span></a><span class="sd">        plot_label : str</span>
+</span><span id="BoxPlot-1148"><a href="#BoxPlot-1148"><span class="linenos">1148</span></a><span class="sd">            A one letter label, such as &#39;a&#39;,&#39;b&#39;, ...</span>
+</span><span id="BoxPlot-1149"><a href="#BoxPlot-1149"><span class="linenos">1149</span></a><span class="sd">        xpos : float, optional, default is -0.30</span>
+</span><span id="BoxPlot-1150"><a href="#BoxPlot-1150"><span class="linenos">1150</span></a><span class="sd">            X-position of the label.</span>
+</span><span id="BoxPlot-1151"><a href="#BoxPlot-1151"><span class="linenos">1151</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
+</span><span id="BoxPlot-1152"><a href="#BoxPlot-1152"><span class="linenos">1152</span></a><span class="sd">        ypos : float, optional, default is 1.00</span>
+</span><span id="BoxPlot-1153"><a href="#BoxPlot-1153"><span class="linenos">1153</span></a><span class="sd">            X-position of the label.</span>
+</span><span id="BoxPlot-1154"><a href="#BoxPlot-1154"><span class="linenos">1154</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
+</span><span id="BoxPlot-1155"><a href="#BoxPlot-1155"><span class="linenos">1155</span></a><span class="sd">        fontsize : int, optional, default is 10</span>
+</span><span id="BoxPlot-1156"><a href="#BoxPlot-1156"><span class="linenos">1156</span></a><span class="sd">            Font size of the label.</span>
+</span><span id="BoxPlot-1157"><a href="#BoxPlot-1157"><span class="linenos">1157</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
+</span><span id="BoxPlot-1158"><a href="#BoxPlot-1158"><span class="linenos">1158</span></a><span class="sd">        </span>
+</span><span id="BoxPlot-1159"><a href="#BoxPlot-1159"><span class="linenos">1159</span></a><span class="sd">        Returns</span>
+</span><span id="BoxPlot-1160"><a href="#BoxPlot-1160"><span class="linenos">1160</span></a><span class="sd">        -------</span>
+</span><span id="BoxPlot-1161"><a href="#BoxPlot-1161"><span class="linenos">1161</span></a><span class="sd">        None</span>
+</span><span id="BoxPlot-1162"><a href="#BoxPlot-1162"><span class="linenos">1162</span></a><span class="sd">            The output is the plot-with-label saved in self/BoxPlot object.</span>
+</span><span id="BoxPlot-1163"><a href="#BoxPlot-1163"><span class="linenos">1163</span></a><span class="sd">        &#39;&#39;&#39;</span>
+</span><span id="BoxPlot-1164"><a href="#BoxPlot-1164"><span class="linenos">1164</span></a>        
+</span><span id="BoxPlot-1165"><a href="#BoxPlot-1165"><span class="linenos">1165</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">xpos</span><span class="p">,</span> <span class="n">ypos</span><span class="p">,</span> <span class="n">plot_label</span><span class="p">,</span>
+</span><span id="BoxPlot-1166"><a href="#BoxPlot-1166"><span class="linenos">1166</span></a>            <span class="n">fontsize</span><span class="o">=</span><span class="n">fontsize</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">)</span>
+</span><span id="BoxPlot-1167"><a href="#BoxPlot-1167"><span class="linenos">1167</span></a>
+</span><span id="BoxPlot-1168"><a href="#BoxPlot-1168"><span class="linenos">1168</span></a>    
+</span><span id="BoxPlot-1169"><a href="#BoxPlot-1169"><span class="linenos">1169</span></a>    <span class="k">def</span> <span class="nf">finalize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">xlabelpad</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylabelpad</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span><span id="BoxPlot-1170"><a href="#BoxPlot-1170"><span class="linenos">1170</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BoxPlot-1171"><a href="#BoxPlot-1171"><span class="linenos">1171</span></a><span class="sd">        Finalize boxplot (add XY-labels, apply labelpads ...).</span>
+</span><span id="BoxPlot-1172"><a href="#BoxPlot-1172"><span class="linenos">1172</span></a>
+</span><span id="BoxPlot-1173"><a href="#BoxPlot-1173"><span class="linenos">1173</span></a><span class="sd">        Parameters</span>
+</span><span id="BoxPlot-1174"><a href="#BoxPlot-1174"><span class="linenos">1174</span></a><span class="sd">        ----------</span>
+</span><span id="BoxPlot-1175"><a href="#BoxPlot-1175"><span class="linenos">1175</span></a><span class="sd">        xlabel : str</span>
+</span><span id="BoxPlot-1176"><a href="#BoxPlot-1176"><span class="linenos">1176</span></a><span class="sd">            X-axis main label (in addition to X category labels).</span>
+</span><span id="BoxPlot-1177"><a href="#BoxPlot-1177"><span class="linenos">1177</span></a><span class="sd">        ylabel : str</span>
+</span><span id="BoxPlot-1178"><a href="#BoxPlot-1178"><span class="linenos">1178</span></a><span class="sd">            Y-axis main label (in addition to Y numerical values)</span>
+</span><span id="BoxPlot-1179"><a href="#BoxPlot-1179"><span class="linenos">1179</span></a><span class="sd">        xlabelpad : float, optional, the default is None</span>
+</span><span id="BoxPlot-1180"><a href="#BoxPlot-1180"><span class="linenos">1180</span></a><span class="sd">            Distance between xlabel and the plot edge.</span>
+</span><span id="BoxPlot-1181"><a href="#BoxPlot-1181"><span class="linenos">1181</span></a><span class="sd">            If not given, the default matplotlib-estimated distance is used.</span>
+</span><span id="BoxPlot-1182"><a href="#BoxPlot-1182"><span class="linenos">1182</span></a><span class="sd">        ylabelpad : float, optional, the default is None</span>
+</span><span id="BoxPlot-1183"><a href="#BoxPlot-1183"><span class="linenos">1183</span></a><span class="sd">            Distance between ylabel and the plot edge.</span>
+</span><span id="BoxPlot-1184"><a href="#BoxPlot-1184"><span class="linenos">1184</span></a><span class="sd">            If not given, the default matplotlib-estimated distance is used.</span>
+</span><span id="BoxPlot-1185"><a href="#BoxPlot-1185"><span class="linenos">1185</span></a>
+</span><span id="BoxPlot-1186"><a href="#BoxPlot-1186"><span class="linenos">1186</span></a><span class="sd">        Returns</span>
+</span><span id="BoxPlot-1187"><a href="#BoxPlot-1187"><span class="linenos">1187</span></a><span class="sd">        -------</span>
+</span><span id="BoxPlot-1188"><a href="#BoxPlot-1188"><span class="linenos">1188</span></a><span class="sd">        None</span>
+</span><span id="BoxPlot-1189"><a href="#BoxPlot-1189"><span class="linenos">1189</span></a><span class="sd">            The output is the finalized plot saved in self/BoxPlot object.</span>
+</span><span id="BoxPlot-1190"><a href="#BoxPlot-1190"><span class="linenos">1190</span></a><span class="sd">        &#39;&#39;&#39;</span>
+</span><span id="BoxPlot-1191"><a href="#BoxPlot-1191"><span class="linenos">1191</span></a>        
+</span><span id="BoxPlot-1192"><a href="#BoxPlot-1192"><span class="linenos">1192</span></a>        <span class="c1"># Add X,Y labels (and take xlabelpad,ylabelpad into account)</span>
+</span><span id="BoxPlot-1193"><a href="#BoxPlot-1193"><span class="linenos">1193</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">xlabel</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="n">xlabelpad</span><span class="p">)</span>
+</span><span id="BoxPlot-1194"><a href="#BoxPlot-1194"><span class="linenos">1194</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">ylabel</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="n">ylabelpad</span><span class="p">)</span> 
+</span><span id="BoxPlot-1195"><a href="#BoxPlot-1195"><span class="linenos">1195</span></a>        
+</span><span id="BoxPlot-1196"><a href="#BoxPlot-1196"><span class="linenos">1196</span></a>        <span class="c1"># Add grid (and ensure that it is BELOW boxes in the boxplot</span>
+</span><span id="BoxPlot-1197"><a href="#BoxPlot-1197"><span class="linenos">1197</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_axisbelow</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="BoxPlot-1198"><a href="#BoxPlot-1198"><span class="linenos">1198</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</span><span id="BoxPlot-1199"><a href="#BoxPlot-1199"><span class="linenos">1199</span></a>        
+</span><span id="BoxPlot-1200"><a href="#BoxPlot-1200"><span class="linenos">1200</span></a>        <span class="c1"># Apply tight_layout to figure</span>
+</span><span id="BoxPlot-1201"><a href="#BoxPlot-1201"><span class="linenos">1201</span></a>        <span class="c1"># (if the figure is defined = if we create standalone plot</span>
+</span><span id="BoxPlot-1202"><a href="#BoxPlot-1202"><span class="linenos">1202</span></a>        <span class="c1"># (in case of multiple plots, we create just axes, not the whole fig</span>
+</span><span id="BoxPlot-1203"><a href="#BoxPlot-1203"><span class="linenos">1203</span></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span> 
+</span><span id="BoxPlot-1204"><a href="#BoxPlot-1204"><span class="linenos">1204</span></a>            <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="BoxPlot-1205"><a href="#BoxPlot-1205"><span class="linenos">1205</span></a>
+</span><span id="BoxPlot-1206"><a href="#BoxPlot-1206"><span class="linenos">1206</span></a>    
+</span><span id="BoxPlot-1207"><a href="#BoxPlot-1207"><span class="linenos">1207</span></a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_graph</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">):</span>
+</span><span id="BoxPlot-1208"><a href="#BoxPlot-1208"><span class="linenos">1208</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BoxPlot-1209"><a href="#BoxPlot-1209"><span class="linenos">1209</span></a><span class="sd">        Save boxplot to image file.</span>
+</span><span id="BoxPlot-1210"><a href="#BoxPlot-1210"><span class="linenos">1210</span></a>
+</span><span id="BoxPlot-1211"><a href="#BoxPlot-1211"><span class="linenos">1211</span></a><span class="sd">        Parameters</span>
+</span><span id="BoxPlot-1212"><a href="#BoxPlot-1212"><span class="linenos">1212</span></a><span class="sd">        ----------</span>
+</span><span id="BoxPlot-1213"><a href="#BoxPlot-1213"><span class="linenos">1213</span></a><span class="sd">        output_graph : str, optional, default is &#39;default&#39;</span>
+</span><span id="BoxPlot-1214"><a href="#BoxPlot-1214"><span class="linenos">1214</span></a><span class="sd">            Name of the output graph, such as &#39;my_plot.png&#39;.</span>
+</span><span id="BoxPlot-1215"><a href="#BoxPlot-1215"><span class="linenos">1215</span></a><span class="sd">            If not given, some suitable default filename will be created.</span>
+</span><span id="BoxPlot-1216"><a href="#BoxPlot-1216"><span class="linenos">1216</span></a><span class="sd">        dpi : int, optional, default is 300</span>
+</span><span id="BoxPlot-1217"><a href="#BoxPlot-1217"><span class="linenos">1217</span></a><span class="sd">            DPI resolution of the saved plot.</span>
+</span><span id="BoxPlot-1218"><a href="#BoxPlot-1218"><span class="linenos">1218</span></a><span class="sd">            </span>
+</span><span id="BoxPlot-1219"><a href="#BoxPlot-1219"><span class="linenos">1219</span></a><span class="sd">        Returns</span>
+</span><span id="BoxPlot-1220"><a href="#BoxPlot-1220"><span class="linenos">1220</span></a><span class="sd">        -------</span>
+</span><span id="BoxPlot-1221"><a href="#BoxPlot-1221"><span class="linenos">1221</span></a><span class="sd">        None</span>
+</span><span id="BoxPlot-1222"><a href="#BoxPlot-1222"><span class="linenos">1222</span></a><span class="sd">            The output is the plot saved in a file.</span>
+</span><span id="BoxPlot-1223"><a href="#BoxPlot-1223"><span class="linenos">1223</span></a><span class="sd">        &#39;&#39;&#39;</span>
+</span><span id="BoxPlot-1224"><a href="#BoxPlot-1224"><span class="linenos">1224</span></a>        
+</span><span id="BoxPlot-1225"><a href="#BoxPlot-1225"><span class="linenos">1225</span></a>        <span class="c1"># Boxplots can be used in multiplots (although it is not typical).</span>
+</span><span id="BoxPlot-1226"><a href="#BoxPlot-1226"><span class="linenos">1226</span></a>        <span class="c1"># * If the plot IS NOT a part of a multiplot (= plt object),</span>
+</span><span id="BoxPlot-1227"><a href="#BoxPlot-1227"><span class="linenos">1227</span></a>        <span class="c1">#   it can be saved here,</span>
+</span><span id="BoxPlot-1228"><a href="#BoxPlot-1228"><span class="linenos">1228</span></a>        <span class="c1">#   because in such a case it represents an individual file.</span>
+</span><span id="BoxPlot-1229"><a href="#BoxPlot-1229"><span class="linenos">1229</span></a>        <span class="c1"># * If the plot IS a part of a multiplot  (= ax object of a fig object)</span>
+</span><span id="BoxPlot-1230"><a href="#BoxPlot-1230"><span class="linenos">1230</span></a>        <span class="c1">#   it cannot be saved here, because it does not make sense.</span>
+</span><span id="BoxPlot-1231"><a href="#BoxPlot-1231"><span class="linenos">1231</span></a>        <span class="c1">#   Instead, you typically save the whole fig at the end of the script,</span>
+</span><span id="BoxPlot-1232"><a href="#BoxPlot-1232"><span class="linenos">1232</span></a>        
+</span><span id="BoxPlot-1233"><a href="#BoxPlot-1233"><span class="linenos">1233</span></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="BoxPlot-1234"><a href="#BoxPlot-1234"><span class="linenos">1234</span></a>            <span class="c1"># Figure is NOT a part of multiplot - Ok to save to file.</span>
+</span><span id="BoxPlot-1235"><a href="#BoxPlot-1235"><span class="linenos">1235</span></a>            <span class="c1"># For saving, we use a universal external function,</span>
+</span><span id="BoxPlot-1236"><a href="#BoxPlot-1236"><span class="linenos">1236</span></a>            <span class="c1"># to avoid code repetition - saving is the same for all plot types.</span>
+</span><span id="BoxPlot-1237"><a href="#BoxPlot-1237"><span class="linenos">1237</span></a>            <span class="n">PlotSaver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">output_graph</span><span class="p">,</span> <span class="n">dpi</span><span class="p">)</span>
+</span><span id="BoxPlot-1238"><a href="#BoxPlot-1238"><span class="linenos">1238</span></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="BoxPlot-1239"><a href="#BoxPlot-1239"><span class="linenos">1239</span></a>            <span class="c1"># Figure is a part of multiplot =&gt; just print warning.</span>
+</span><span id="BoxPlot-1240"><a href="#BoxPlot-1240"><span class="linenos">1240</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The plot is a part of a multiplot.&#39;</span><span class="p">)</span>
+</span><span id="BoxPlot-1241"><a href="#BoxPlot-1241"><span class="linenos">1241</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;It makes no sense to save individual subplots.&#39;</span><span class="p">)</span>
+</span><span id="BoxPlot-1242"><a href="#BoxPlot-1242"><span class="linenos">1242</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Function ignored =&gt; save the whole figure instead!&#39;</span><span class="p">)</span>
+</span><span id="BoxPlot-1243"><a href="#BoxPlot-1243"><span class="linenos">1243</span></a>
+</span><span id="BoxPlot-1244"><a href="#BoxPlot-1244"><span class="linenos">1244</span></a>
+</span><span id="BoxPlot-1245"><a href="#BoxPlot-1245"><span class="linenos">1245</span></a>    <span class="k">def</span> <span class="nf">statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">CATS</span><span class="p">,</span> <span class="n">output_stats</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">):</span>
+</span><span id="BoxPlot-1246"><a href="#BoxPlot-1246"><span class="linenos">1246</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BoxPlot-1247"><a href="#BoxPlot-1247"><span class="linenos">1247</span></a><span class="sd">        Calculate and save boxplot statistics to text file.</span>
+</span><span id="BoxPlot-1248"><a href="#BoxPlot-1248"><span class="linenos">1248</span></a>
+</span><span id="BoxPlot-1249"><a href="#BoxPlot-1249"><span class="linenos">1249</span></a><span class="sd">        Parameters</span>
+</span><span id="BoxPlot-1250"><a href="#BoxPlot-1250"><span class="linenos">1250</span></a><span class="sd">        ----------</span>
+</span><span id="BoxPlot-1251"><a href="#BoxPlot-1251"><span class="linenos">1251</span></a><span class="sd">        X : str</span>
+</span><span id="BoxPlot-1252"><a href="#BoxPlot-1252"><span class="linenos">1252</span></a><span class="sd">            Name of X-variable = column in a Dataframe (such as Sterilization),</span>
+</span><span id="BoxPlot-1253"><a href="#BoxPlot-1253"><span class="linenos">1253</span></a><span class="sd">            which contains categorical data.</span>
+</span><span id="BoxPlot-1254"><a href="#BoxPlot-1254"><span class="linenos">1254</span></a><span class="sd">        Y : str</span>
+</span><span id="BoxPlot-1255"><a href="#BoxPlot-1255"><span class="linenos">1255</span></a><span class="sd">            Name of Y-variable = column in a DataFrame (such as OI_max),</span>
+</span><span id="BoxPlot-1256"><a href="#BoxPlot-1256"><span class="linenos">1256</span></a><span class="sd">            which contains numerical data.</span>
+</span><span id="BoxPlot-1257"><a href="#BoxPlot-1257"><span class="linenos">1257</span></a><span class="sd">        CATS : list</span>
+</span><span id="BoxPlot-1258"><a href="#BoxPlot-1258"><span class="linenos">1258</span></a><span class="sd">            Names of categories = values in a Dataframe (such as [&#39;IRR,&#39;EtO&#39;]),</span>
+</span><span id="BoxPlot-1259"><a href="#BoxPlot-1259"><span class="linenos">1259</span></a><span class="sd">            which should be compared.</span>
+</span><span id="BoxPlot-1260"><a href="#BoxPlot-1260"><span class="linenos">1260</span></a><span class="sd">        output_stats : str, optional, default is &#39;default&#39;</span>
+</span><span id="BoxPlot-1261"><a href="#BoxPlot-1261"><span class="linenos">1261</span></a><span class="sd">            Name of the output text file with statistics.</span>
+</span><span id="BoxPlot-1262"><a href="#BoxPlot-1262"><span class="linenos">1262</span></a><span class="sd">            If &#39;default&#39; the name will be (input_script_name + .txt).</span>
+</span><span id="BoxPlot-1263"><a href="#BoxPlot-1263"><span class="linenos">1263</span></a><span class="sd">            </span>
+</span><span id="BoxPlot-1264"><a href="#BoxPlot-1264"><span class="linenos">1264</span></a><span class="sd">        Returns</span>
+</span><span id="BoxPlot-1265"><a href="#BoxPlot-1265"><span class="linenos">1265</span></a><span class="sd">        -------</span>
+</span><span id="BoxPlot-1266"><a href="#BoxPlot-1266"><span class="linenos">1266</span></a><span class="sd">        None</span>
+</span><span id="BoxPlot-1267"><a href="#BoxPlot-1267"><span class="linenos">1267</span></a><span class="sd">            The output is the calculated statistics</span>
+</span><span id="BoxPlot-1268"><a href="#BoxPlot-1268"><span class="linenos">1268</span></a><span class="sd">            on the screen and in the text file (with name = output_stats).</span>
+</span><span id="BoxPlot-1269"><a href="#BoxPlot-1269"><span class="linenos">1269</span></a><span class="sd">        &#39;&#39;&#39;</span>
+</span><span id="BoxPlot-1270"><a href="#BoxPlot-1270"><span class="linenos">1270</span></a>        <span class="c1"># Name of TXT file with output statistics that corresponds to BoxPlot</span>
+</span><span id="BoxPlot-1271"><a href="#BoxPlot-1271"><span class="linenos">1271</span></a>        <span class="k">if</span> <span class="n">output_stats</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="n">output_stats</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;.txt&#39;</span>
+</span><span id="BoxPlot-1272"><a href="#BoxPlot-1272"><span class="linenos">1272</span></a>        <span class="c1"># Start writing to both standard output and output_stats file</span>
+</span><span id="BoxPlot-1273"><a href="#BoxPlot-1273"><span class="linenos">1273</span></a>        <span class="n">logfile</span> <span class="o">=</span> <span class="n">mio</span><span class="o">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">output_stats</span><span class="p">)</span>
+</span><span id="BoxPlot-1274"><a href="#BoxPlot-1274"><span class="linenos">1274</span></a>        <span class="c1"># Calulate and print statistics</span>
+</span><span id="BoxPlot-1275"><a href="#BoxPlot-1275"><span class="linenos">1275</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correlation matrix table (p-values)&#39;</span><span class="p">)</span>
+</span><span id="BoxPlot-1276"><a href="#BoxPlot-1276"><span class="linenos">1276</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----------------------------------&#39;</span><span class="p">)</span>
+</span><span id="BoxPlot-1277"><a href="#BoxPlot-1277"><span class="linenos">1277</span></a>        <span class="k">for</span> <span class="n">category1</span> <span class="ow">in</span> <span class="n">CATS</span><span class="p">:</span>
+</span><span id="BoxPlot-1278"><a href="#BoxPlot-1278"><span class="linenos">1278</span></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">category1</span><span class="si">:</span><span class="s1">12s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</span><span id="BoxPlot-1279"><a href="#BoxPlot-1279"><span class="linenos">1279</span></a>            <span class="k">for</span> <span class="n">category2</span> <span class="ow">in</span> <span class="n">CATS</span><span class="p">:</span>
+</span><span id="BoxPlot-1280"><a href="#BoxPlot-1280"><span class="linenos">1280</span></a>                <span class="n">xdata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">Y</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="o">==</span> <span class="n">category1</span><span class="p">]</span>
+</span><span id="BoxPlot-1281"><a href="#BoxPlot-1281"><span class="linenos">1281</span></a>                <span class="n">ydata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">Y</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="o">==</span> <span class="n">category2</span><span class="p">]</span>
+</span><span id="BoxPlot-1282"><a href="#BoxPlot-1282"><span class="linenos">1282</span></a>                <span class="n">t</span><span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="n">equal_var</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</span><span id="BoxPlot-1283"><a href="#BoxPlot-1283"><span class="linenos">1283</span></a>                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s1">8.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</span><span id="BoxPlot-1284"><a href="#BoxPlot-1284"><span class="linenos">1284</span></a>            <span class="nb">print</span><span class="p">()</span>
+</span><span id="BoxPlot-1285"><a href="#BoxPlot-1285"><span class="linenos">1285</span></a>        <span class="c1"># Close dual output</span>
+</span><span id="BoxPlot-1286"><a href="#BoxPlot-1286"><span class="linenos">1286</span></a>        <span class="n">logfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></pre></div>
 
 
@@ -4523,9 +4541,18 @@ by means of several methods (draw, finalize, save...).</li>
 </span><span id="BoxPlot.add_boxes-1124"><a href="#BoxPlot.add_boxes-1124"><span class="linenos">1124</span></a><span class="sd">        None.</span>
 </span><span id="BoxPlot.add_boxes-1125"><a href="#BoxPlot.add_boxes-1125"><span class="linenos">1125</span></a>
 </span><span id="BoxPlot.add_boxes-1126"><a href="#BoxPlot.add_boxes-1126"><span class="linenos">1126</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="BoxPlot.add_boxes-1127"><a href="#BoxPlot.add_boxes-1127"><span class="linenos">1127</span></a>        <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
-</span><span id="BoxPlot.add_boxes-1128"><a href="#BoxPlot.add_boxes-1128"><span class="linenos">1128</span></a>            <span class="n">data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span>
-</span><span id="BoxPlot.add_boxes-1129"><a href="#BoxPlot.add_boxes-1129"><span class="linenos">1129</span></a>            <span class="n">order</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="p">)</span>
+</span><span id="BoxPlot.add_boxes-1127"><a href="#BoxPlot.add_boxes-1127"><span class="linenos">1127</span></a>        <span class="c1"># Boxplot parameters below are somewhat confusing - brief summary:</span>
+</span><span id="BoxPlot.add_boxes-1128"><a href="#BoxPlot.add_boxes-1128"><span class="linenos">1128</span></a>        <span class="c1"># (boxplots are rather flexible, this is just one of the possibilities</span>
+</span><span id="BoxPlot.add_boxes-1129"><a href="#BoxPlot.add_boxes-1129"><span class="linenos">1129</span></a>        <span class="c1"># X = column in df containing categorical data -&gt; X-axis</span>
+</span><span id="BoxPlot.add_boxes-1130"><a href="#BoxPlot.add_boxes-1130"><span class="linenos">1130</span></a>        <span class="c1"># Y = column in df containing numerical data (such as OI_max) -&gt; Y-axis</span>
+</span><span id="BoxPlot.add_boxes-1131"><a href="#BoxPlot.add_boxes-1131"><span class="linenos">1131</span></a>        <span class="c1"># hue = color of X-data =&gt; here: number of colors = number of X-data</span>
+</span><span id="BoxPlot.add_boxes-1132"><a href="#BoxPlot.add_boxes-1132"><span class="linenos">1132</span></a>        <span class="c1"># legend=False =&gt; no legend -&gt; default here, but it is good to specify)</span>
+</span><span id="BoxPlot.add_boxes-1133"><a href="#BoxPlot.add_boxes-1133"><span class="linenos">1133</span></a>        <span class="c1"># order = order of data in X-axis -&gt; here: order = categories order</span>
+</span><span id="BoxPlot.add_boxes-1134"><a href="#BoxPlot.add_boxes-1134"><span class="linenos">1134</span></a>        <span class="c1"># palette = definition of colors -&gt; no of colors = no of categories</span>
+</span><span id="BoxPlot.add_boxes-1135"><a href="#BoxPlot.add_boxes-1135"><span class="linenos">1135</span></a>        <span class="c1"># width, ax = clear: width of columns and ax-object = where to plot</span>
+</span><span id="BoxPlot.add_boxes-1136"><a href="#BoxPlot.add_boxes-1136"><span class="linenos">1136</span></a>        <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+</span><span id="BoxPlot.add_boxes-1137"><a href="#BoxPlot.add_boxes-1137"><span class="linenos">1137</span></a>            <span class="n">data</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+</span><span id="BoxPlot.add_boxes-1138"><a href="#BoxPlot.add_boxes-1138"><span class="linenos">1138</span></a>            <span class="n">order</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -4571,32 +4598,32 @@ The width of boxes in the plot.</li>
 
     </div>
     <a class="headerlink" href="#BoxPlot.label"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="BoxPlot.label-1132"><a href="#BoxPlot.label-1132"><span class="linenos">1132</span></a>    <span class="k">def</span> <span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_label</span><span class="p">,</span> <span class="n">xpos</span><span class="o">=-</span><span class="mf">0.30</span><span class="p">,</span> <span class="n">ypos</span><span class="o">=</span><span class="mf">1.00</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-</span><span id="BoxPlot.label-1133"><a href="#BoxPlot.label-1133"><span class="linenos">1133</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
-</span><span id="BoxPlot.label-1134"><a href="#BoxPlot.label-1134"><span class="linenos">1134</span></a><span class="sd">        Add a short one-letter label to upper left corner of the graph.</span>
-</span><span id="BoxPlot.label-1135"><a href="#BoxPlot.label-1135"><span class="linenos">1135</span></a><span class="sd">        </span>
-</span><span id="BoxPlot.label-1136"><a href="#BoxPlot.label-1136"><span class="linenos">1136</span></a><span class="sd">        Parameters</span>
-</span><span id="BoxPlot.label-1137"><a href="#BoxPlot.label-1137"><span class="linenos">1137</span></a><span class="sd">        ----------</span>
-</span><span id="BoxPlot.label-1138"><a href="#BoxPlot.label-1138"><span class="linenos">1138</span></a><span class="sd">        plot_label : str</span>
-</span><span id="BoxPlot.label-1139"><a href="#BoxPlot.label-1139"><span class="linenos">1139</span></a><span class="sd">            A one letter label, such as &#39;a&#39;,&#39;b&#39;, ...</span>
-</span><span id="BoxPlot.label-1140"><a href="#BoxPlot.label-1140"><span class="linenos">1140</span></a><span class="sd">        xpos : float, optional, default is -0.30</span>
-</span><span id="BoxPlot.label-1141"><a href="#BoxPlot.label-1141"><span class="linenos">1141</span></a><span class="sd">            X-position of the label.</span>
-</span><span id="BoxPlot.label-1142"><a href="#BoxPlot.label-1142"><span class="linenos">1142</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
-</span><span id="BoxPlot.label-1143"><a href="#BoxPlot.label-1143"><span class="linenos">1143</span></a><span class="sd">        ypos : float, optional, default is 1.00</span>
-</span><span id="BoxPlot.label-1144"><a href="#BoxPlot.label-1144"><span class="linenos">1144</span></a><span class="sd">            X-position of the label.</span>
-</span><span id="BoxPlot.label-1145"><a href="#BoxPlot.label-1145"><span class="linenos">1145</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
-</span><span id="BoxPlot.label-1146"><a href="#BoxPlot.label-1146"><span class="linenos">1146</span></a><span class="sd">        fontsize : int, optional, default is 10</span>
-</span><span id="BoxPlot.label-1147"><a href="#BoxPlot.label-1147"><span class="linenos">1147</span></a><span class="sd">            Font size of the label.</span>
-</span><span id="BoxPlot.label-1148"><a href="#BoxPlot.label-1148"><span class="linenos">1148</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
-</span><span id="BoxPlot.label-1149"><a href="#BoxPlot.label-1149"><span class="linenos">1149</span></a><span class="sd">        </span>
-</span><span id="BoxPlot.label-1150"><a href="#BoxPlot.label-1150"><span class="linenos">1150</span></a><span class="sd">        Returns</span>
-</span><span id="BoxPlot.label-1151"><a href="#BoxPlot.label-1151"><span class="linenos">1151</span></a><span class="sd">        -------</span>
-</span><span id="BoxPlot.label-1152"><a href="#BoxPlot.label-1152"><span class="linenos">1152</span></a><span class="sd">        None</span>
-</span><span id="BoxPlot.label-1153"><a href="#BoxPlot.label-1153"><span class="linenos">1153</span></a><span class="sd">            The output is the plot-with-label saved in self/BoxPlot object.</span>
-</span><span id="BoxPlot.label-1154"><a href="#BoxPlot.label-1154"><span class="linenos">1154</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="BoxPlot.label-1155"><a href="#BoxPlot.label-1155"><span class="linenos">1155</span></a>        
-</span><span id="BoxPlot.label-1156"><a href="#BoxPlot.label-1156"><span class="linenos">1156</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">xpos</span><span class="p">,</span> <span class="n">ypos</span><span class="p">,</span> <span class="n">plot_label</span><span class="p">,</span>
-</span><span id="BoxPlot.label-1157"><a href="#BoxPlot.label-1157"><span class="linenos">1157</span></a>            <span class="n">fontsize</span><span class="o">=</span><span class="n">fontsize</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="BoxPlot.label-1141"><a href="#BoxPlot.label-1141"><span class="linenos">1141</span></a>    <span class="k">def</span> <span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_label</span><span class="p">,</span> <span class="n">xpos</span><span class="o">=-</span><span class="mf">0.30</span><span class="p">,</span> <span class="n">ypos</span><span class="o">=</span><span class="mf">1.00</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+</span><span id="BoxPlot.label-1142"><a href="#BoxPlot.label-1142"><span class="linenos">1142</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BoxPlot.label-1143"><a href="#BoxPlot.label-1143"><span class="linenos">1143</span></a><span class="sd">        Add a short one-letter label to upper left corner of the graph.</span>
+</span><span id="BoxPlot.label-1144"><a href="#BoxPlot.label-1144"><span class="linenos">1144</span></a><span class="sd">        </span>
+</span><span id="BoxPlot.label-1145"><a href="#BoxPlot.label-1145"><span class="linenos">1145</span></a><span class="sd">        Parameters</span>
+</span><span id="BoxPlot.label-1146"><a href="#BoxPlot.label-1146"><span class="linenos">1146</span></a><span class="sd">        ----------</span>
+</span><span id="BoxPlot.label-1147"><a href="#BoxPlot.label-1147"><span class="linenos">1147</span></a><span class="sd">        plot_label : str</span>
+</span><span id="BoxPlot.label-1148"><a href="#BoxPlot.label-1148"><span class="linenos">1148</span></a><span class="sd">            A one letter label, such as &#39;a&#39;,&#39;b&#39;, ...</span>
+</span><span id="BoxPlot.label-1149"><a href="#BoxPlot.label-1149"><span class="linenos">1149</span></a><span class="sd">        xpos : float, optional, default is -0.30</span>
+</span><span id="BoxPlot.label-1150"><a href="#BoxPlot.label-1150"><span class="linenos">1150</span></a><span class="sd">            X-position of the label.</span>
+</span><span id="BoxPlot.label-1151"><a href="#BoxPlot.label-1151"><span class="linenos">1151</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
+</span><span id="BoxPlot.label-1152"><a href="#BoxPlot.label-1152"><span class="linenos">1152</span></a><span class="sd">        ypos : float, optional, default is 1.00</span>
+</span><span id="BoxPlot.label-1153"><a href="#BoxPlot.label-1153"><span class="linenos">1153</span></a><span class="sd">            X-position of the label.</span>
+</span><span id="BoxPlot.label-1154"><a href="#BoxPlot.label-1154"><span class="linenos">1154</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
+</span><span id="BoxPlot.label-1155"><a href="#BoxPlot.label-1155"><span class="linenos">1155</span></a><span class="sd">        fontsize : int, optional, default is 10</span>
+</span><span id="BoxPlot.label-1156"><a href="#BoxPlot.label-1156"><span class="linenos">1156</span></a><span class="sd">            Font size of the label.</span>
+</span><span id="BoxPlot.label-1157"><a href="#BoxPlot.label-1157"><span class="linenos">1157</span></a><span class="sd">            The default value should work, but can be adjusted.</span>
+</span><span id="BoxPlot.label-1158"><a href="#BoxPlot.label-1158"><span class="linenos">1158</span></a><span class="sd">        </span>
+</span><span id="BoxPlot.label-1159"><a href="#BoxPlot.label-1159"><span class="linenos">1159</span></a><span class="sd">        Returns</span>
+</span><span id="BoxPlot.label-1160"><a href="#BoxPlot.label-1160"><span class="linenos">1160</span></a><span class="sd">        -------</span>
+</span><span id="BoxPlot.label-1161"><a href="#BoxPlot.label-1161"><span class="linenos">1161</span></a><span class="sd">        None</span>
+</span><span id="BoxPlot.label-1162"><a href="#BoxPlot.label-1162"><span class="linenos">1162</span></a><span class="sd">            The output is the plot-with-label saved in self/BoxPlot object.</span>
+</span><span id="BoxPlot.label-1163"><a href="#BoxPlot.label-1163"><span class="linenos">1163</span></a><span class="sd">        &#39;&#39;&#39;</span>
+</span><span id="BoxPlot.label-1164"><a href="#BoxPlot.label-1164"><span class="linenos">1164</span></a>        
+</span><span id="BoxPlot.label-1165"><a href="#BoxPlot.label-1165"><span class="linenos">1165</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">xpos</span><span class="p">,</span> <span class="n">ypos</span><span class="p">,</span> <span class="n">plot_label</span><span class="p">,</span>
+</span><span id="BoxPlot.label-1166"><a href="#BoxPlot.label-1166"><span class="linenos">1166</span></a>            <span class="n">fontsize</span><span class="o">=</span><span class="n">fontsize</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -4638,42 +4665,42 @@ The default value should work, but can be adjusted.</li>
 
     </div>
     <a class="headerlink" href="#BoxPlot.finalize"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="BoxPlot.finalize-1160"><a href="#BoxPlot.finalize-1160"><span class="linenos">1160</span></a>    <span class="k">def</span> <span class="nf">finalize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">xlabelpad</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylabelpad</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-</span><span id="BoxPlot.finalize-1161"><a href="#BoxPlot.finalize-1161"><span class="linenos">1161</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
-</span><span id="BoxPlot.finalize-1162"><a href="#BoxPlot.finalize-1162"><span class="linenos">1162</span></a><span class="sd">        Finalize boxplot (add XY-labels, apply labelpads ...).</span>
-</span><span id="BoxPlot.finalize-1163"><a href="#BoxPlot.finalize-1163"><span class="linenos">1163</span></a>
-</span><span id="BoxPlot.finalize-1164"><a href="#BoxPlot.finalize-1164"><span class="linenos">1164</span></a><span class="sd">        Parameters</span>
-</span><span id="BoxPlot.finalize-1165"><a href="#BoxPlot.finalize-1165"><span class="linenos">1165</span></a><span class="sd">        ----------</span>
-</span><span id="BoxPlot.finalize-1166"><a href="#BoxPlot.finalize-1166"><span class="linenos">1166</span></a><span class="sd">        xlabel : str</span>
-</span><span id="BoxPlot.finalize-1167"><a href="#BoxPlot.finalize-1167"><span class="linenos">1167</span></a><span class="sd">            X-axis main label (in addition to X category labels).</span>
-</span><span id="BoxPlot.finalize-1168"><a href="#BoxPlot.finalize-1168"><span class="linenos">1168</span></a><span class="sd">        ylabel : str</span>
-</span><span id="BoxPlot.finalize-1169"><a href="#BoxPlot.finalize-1169"><span class="linenos">1169</span></a><span class="sd">            Y-axis main label (in addition to Y numerical values)</span>
-</span><span id="BoxPlot.finalize-1170"><a href="#BoxPlot.finalize-1170"><span class="linenos">1170</span></a><span class="sd">        xlabelpad : float, optional, the default is None</span>
-</span><span id="BoxPlot.finalize-1171"><a href="#BoxPlot.finalize-1171"><span class="linenos">1171</span></a><span class="sd">            Distance between xlabel and the plot edge.</span>
-</span><span id="BoxPlot.finalize-1172"><a href="#BoxPlot.finalize-1172"><span class="linenos">1172</span></a><span class="sd">            If not given, the default matplotlib-estimated distance is used.</span>
-</span><span id="BoxPlot.finalize-1173"><a href="#BoxPlot.finalize-1173"><span class="linenos">1173</span></a><span class="sd">        ylabelpad : float, optional, the default is None</span>
-</span><span id="BoxPlot.finalize-1174"><a href="#BoxPlot.finalize-1174"><span class="linenos">1174</span></a><span class="sd">            Distance between ylabel and the plot edge.</span>
-</span><span id="BoxPlot.finalize-1175"><a href="#BoxPlot.finalize-1175"><span class="linenos">1175</span></a><span class="sd">            If not given, the default matplotlib-estimated distance is used.</span>
-</span><span id="BoxPlot.finalize-1176"><a href="#BoxPlot.finalize-1176"><span class="linenos">1176</span></a>
-</span><span id="BoxPlot.finalize-1177"><a href="#BoxPlot.finalize-1177"><span class="linenos">1177</span></a><span class="sd">        Returns</span>
-</span><span id="BoxPlot.finalize-1178"><a href="#BoxPlot.finalize-1178"><span class="linenos">1178</span></a><span class="sd">        -------</span>
-</span><span id="BoxPlot.finalize-1179"><a href="#BoxPlot.finalize-1179"><span class="linenos">1179</span></a><span class="sd">        None</span>
-</span><span id="BoxPlot.finalize-1180"><a href="#BoxPlot.finalize-1180"><span class="linenos">1180</span></a><span class="sd">            The output is the finalized plot saved in self/BoxPlot object.</span>
-</span><span id="BoxPlot.finalize-1181"><a href="#BoxPlot.finalize-1181"><span class="linenos">1181</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="BoxPlot.finalize-1182"><a href="#BoxPlot.finalize-1182"><span class="linenos">1182</span></a>        
-</span><span id="BoxPlot.finalize-1183"><a href="#BoxPlot.finalize-1183"><span class="linenos">1183</span></a>        <span class="c1"># Add X,Y labels (and take xlabelpad,ylabelpad into account)</span>
-</span><span id="BoxPlot.finalize-1184"><a href="#BoxPlot.finalize-1184"><span class="linenos">1184</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">xlabel</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="n">xlabelpad</span><span class="p">)</span>
-</span><span id="BoxPlot.finalize-1185"><a href="#BoxPlot.finalize-1185"><span class="linenos">1185</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">ylabel</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="n">ylabelpad</span><span class="p">)</span> 
-</span><span id="BoxPlot.finalize-1186"><a href="#BoxPlot.finalize-1186"><span class="linenos">1186</span></a>        
-</span><span id="BoxPlot.finalize-1187"><a href="#BoxPlot.finalize-1187"><span class="linenos">1187</span></a>        <span class="c1"># Add grid (and ensure that it is BELOW boxes in the boxplot</span>
-</span><span id="BoxPlot.finalize-1188"><a href="#BoxPlot.finalize-1188"><span class="linenos">1188</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_axisbelow</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="BoxPlot.finalize-1189"><a href="#BoxPlot.finalize-1189"><span class="linenos">1189</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-</span><span id="BoxPlot.finalize-1190"><a href="#BoxPlot.finalize-1190"><span class="linenos">1190</span></a>        
-</span><span id="BoxPlot.finalize-1191"><a href="#BoxPlot.finalize-1191"><span class="linenos">1191</span></a>        <span class="c1"># Apply tight_layout to figure</span>
-</span><span id="BoxPlot.finalize-1192"><a href="#BoxPlot.finalize-1192"><span class="linenos">1192</span></a>        <span class="c1"># (if the figure is defined = if we create standalone plot</span>
-</span><span id="BoxPlot.finalize-1193"><a href="#BoxPlot.finalize-1193"><span class="linenos">1193</span></a>        <span class="c1"># (in case of multiple plots, we create just axes, not the whole fig</span>
-</span><span id="BoxPlot.finalize-1194"><a href="#BoxPlot.finalize-1194"><span class="linenos">1194</span></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span> 
-</span><span id="BoxPlot.finalize-1195"><a href="#BoxPlot.finalize-1195"><span class="linenos">1195</span></a>            <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="BoxPlot.finalize-1169"><a href="#BoxPlot.finalize-1169"><span class="linenos">1169</span></a>    <span class="k">def</span> <span class="nf">finalize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">xlabelpad</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylabelpad</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span><span id="BoxPlot.finalize-1170"><a href="#BoxPlot.finalize-1170"><span class="linenos">1170</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BoxPlot.finalize-1171"><a href="#BoxPlot.finalize-1171"><span class="linenos">1171</span></a><span class="sd">        Finalize boxplot (add XY-labels, apply labelpads ...).</span>
+</span><span id="BoxPlot.finalize-1172"><a href="#BoxPlot.finalize-1172"><span class="linenos">1172</span></a>
+</span><span id="BoxPlot.finalize-1173"><a href="#BoxPlot.finalize-1173"><span class="linenos">1173</span></a><span class="sd">        Parameters</span>
+</span><span id="BoxPlot.finalize-1174"><a href="#BoxPlot.finalize-1174"><span class="linenos">1174</span></a><span class="sd">        ----------</span>
+</span><span id="BoxPlot.finalize-1175"><a href="#BoxPlot.finalize-1175"><span class="linenos">1175</span></a><span class="sd">        xlabel : str</span>
+</span><span id="BoxPlot.finalize-1176"><a href="#BoxPlot.finalize-1176"><span class="linenos">1176</span></a><span class="sd">            X-axis main label (in addition to X category labels).</span>
+</span><span id="BoxPlot.finalize-1177"><a href="#BoxPlot.finalize-1177"><span class="linenos">1177</span></a><span class="sd">        ylabel : str</span>
+</span><span id="BoxPlot.finalize-1178"><a href="#BoxPlot.finalize-1178"><span class="linenos">1178</span></a><span class="sd">            Y-axis main label (in addition to Y numerical values)</span>
+</span><span id="BoxPlot.finalize-1179"><a href="#BoxPlot.finalize-1179"><span class="linenos">1179</span></a><span class="sd">        xlabelpad : float, optional, the default is None</span>
+</span><span id="BoxPlot.finalize-1180"><a href="#BoxPlot.finalize-1180"><span class="linenos">1180</span></a><span class="sd">            Distance between xlabel and the plot edge.</span>
+</span><span id="BoxPlot.finalize-1181"><a href="#BoxPlot.finalize-1181"><span class="linenos">1181</span></a><span class="sd">            If not given, the default matplotlib-estimated distance is used.</span>
+</span><span id="BoxPlot.finalize-1182"><a href="#BoxPlot.finalize-1182"><span class="linenos">1182</span></a><span class="sd">        ylabelpad : float, optional, the default is None</span>
+</span><span id="BoxPlot.finalize-1183"><a href="#BoxPlot.finalize-1183"><span class="linenos">1183</span></a><span class="sd">            Distance between ylabel and the plot edge.</span>
+</span><span id="BoxPlot.finalize-1184"><a href="#BoxPlot.finalize-1184"><span class="linenos">1184</span></a><span class="sd">            If not given, the default matplotlib-estimated distance is used.</span>
+</span><span id="BoxPlot.finalize-1185"><a href="#BoxPlot.finalize-1185"><span class="linenos">1185</span></a>
+</span><span id="BoxPlot.finalize-1186"><a href="#BoxPlot.finalize-1186"><span class="linenos">1186</span></a><span class="sd">        Returns</span>
+</span><span id="BoxPlot.finalize-1187"><a href="#BoxPlot.finalize-1187"><span class="linenos">1187</span></a><span class="sd">        -------</span>
+</span><span id="BoxPlot.finalize-1188"><a href="#BoxPlot.finalize-1188"><span class="linenos">1188</span></a><span class="sd">        None</span>
+</span><span id="BoxPlot.finalize-1189"><a href="#BoxPlot.finalize-1189"><span class="linenos">1189</span></a><span class="sd">            The output is the finalized plot saved in self/BoxPlot object.</span>
+</span><span id="BoxPlot.finalize-1190"><a href="#BoxPlot.finalize-1190"><span class="linenos">1190</span></a><span class="sd">        &#39;&#39;&#39;</span>
+</span><span id="BoxPlot.finalize-1191"><a href="#BoxPlot.finalize-1191"><span class="linenos">1191</span></a>        
+</span><span id="BoxPlot.finalize-1192"><a href="#BoxPlot.finalize-1192"><span class="linenos">1192</span></a>        <span class="c1"># Add X,Y labels (and take xlabelpad,ylabelpad into account)</span>
+</span><span id="BoxPlot.finalize-1193"><a href="#BoxPlot.finalize-1193"><span class="linenos">1193</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">xlabel</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="n">xlabelpad</span><span class="p">)</span>
+</span><span id="BoxPlot.finalize-1194"><a href="#BoxPlot.finalize-1194"><span class="linenos">1194</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">ylabel</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="n">ylabelpad</span><span class="p">)</span> 
+</span><span id="BoxPlot.finalize-1195"><a href="#BoxPlot.finalize-1195"><span class="linenos">1195</span></a>        
+</span><span id="BoxPlot.finalize-1196"><a href="#BoxPlot.finalize-1196"><span class="linenos">1196</span></a>        <span class="c1"># Add grid (and ensure that it is BELOW boxes in the boxplot</span>
+</span><span id="BoxPlot.finalize-1197"><a href="#BoxPlot.finalize-1197"><span class="linenos">1197</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_axisbelow</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="BoxPlot.finalize-1198"><a href="#BoxPlot.finalize-1198"><span class="linenos">1198</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</span><span id="BoxPlot.finalize-1199"><a href="#BoxPlot.finalize-1199"><span class="linenos">1199</span></a>        
+</span><span id="BoxPlot.finalize-1200"><a href="#BoxPlot.finalize-1200"><span class="linenos">1200</span></a>        <span class="c1"># Apply tight_layout to figure</span>
+</span><span id="BoxPlot.finalize-1201"><a href="#BoxPlot.finalize-1201"><span class="linenos">1201</span></a>        <span class="c1"># (if the figure is defined = if we create standalone plot</span>
+</span><span id="BoxPlot.finalize-1202"><a href="#BoxPlot.finalize-1202"><span class="linenos">1202</span></a>        <span class="c1"># (in case of multiple plots, we create just axes, not the whole fig</span>
+</span><span id="BoxPlot.finalize-1203"><a href="#BoxPlot.finalize-1203"><span class="linenos">1203</span></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span> 
+</span><span id="BoxPlot.finalize-1204"><a href="#BoxPlot.finalize-1204"><span class="linenos">1204</span></a>            <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </span></pre></div>
 
 
@@ -4714,42 +4741,42 @@ If not given, the default matplotlib-estimated distance is used.</li>
 
     </div>
     <a class="headerlink" href="#BoxPlot.save"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="BoxPlot.save-1198"><a href="#BoxPlot.save-1198"><span class="linenos">1198</span></a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_graph</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">):</span>
-</span><span id="BoxPlot.save-1199"><a href="#BoxPlot.save-1199"><span class="linenos">1199</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
-</span><span id="BoxPlot.save-1200"><a href="#BoxPlot.save-1200"><span class="linenos">1200</span></a><span class="sd">        Save boxplot to image file.</span>
-</span><span id="BoxPlot.save-1201"><a href="#BoxPlot.save-1201"><span class="linenos">1201</span></a>
-</span><span id="BoxPlot.save-1202"><a href="#BoxPlot.save-1202"><span class="linenos">1202</span></a><span class="sd">        Parameters</span>
-</span><span id="BoxPlot.save-1203"><a href="#BoxPlot.save-1203"><span class="linenos">1203</span></a><span class="sd">        ----------</span>
-</span><span id="BoxPlot.save-1204"><a href="#BoxPlot.save-1204"><span class="linenos">1204</span></a><span class="sd">        output_graph : str, optional, default is &#39;default&#39;</span>
-</span><span id="BoxPlot.save-1205"><a href="#BoxPlot.save-1205"><span class="linenos">1205</span></a><span class="sd">            Name of the output graph, such as &#39;my_plot.png&#39;.</span>
-</span><span id="BoxPlot.save-1206"><a href="#BoxPlot.save-1206"><span class="linenos">1206</span></a><span class="sd">            If not given, some suitable default filename will be created.</span>
-</span><span id="BoxPlot.save-1207"><a href="#BoxPlot.save-1207"><span class="linenos">1207</span></a><span class="sd">        dpi : int, optional, default is 300</span>
-</span><span id="BoxPlot.save-1208"><a href="#BoxPlot.save-1208"><span class="linenos">1208</span></a><span class="sd">            DPI resolution of the saved plot.</span>
-</span><span id="BoxPlot.save-1209"><a href="#BoxPlot.save-1209"><span class="linenos">1209</span></a><span class="sd">            </span>
-</span><span id="BoxPlot.save-1210"><a href="#BoxPlot.save-1210"><span class="linenos">1210</span></a><span class="sd">        Returns</span>
-</span><span id="BoxPlot.save-1211"><a href="#BoxPlot.save-1211"><span class="linenos">1211</span></a><span class="sd">        -------</span>
-</span><span id="BoxPlot.save-1212"><a href="#BoxPlot.save-1212"><span class="linenos">1212</span></a><span class="sd">        None</span>
-</span><span id="BoxPlot.save-1213"><a href="#BoxPlot.save-1213"><span class="linenos">1213</span></a><span class="sd">            The output is the plot saved in a file.</span>
-</span><span id="BoxPlot.save-1214"><a href="#BoxPlot.save-1214"><span class="linenos">1214</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="BoxPlot.save-1215"><a href="#BoxPlot.save-1215"><span class="linenos">1215</span></a>        
-</span><span id="BoxPlot.save-1216"><a href="#BoxPlot.save-1216"><span class="linenos">1216</span></a>        <span class="c1"># Boxplots can be used in multiplots (although it is not typical).</span>
-</span><span id="BoxPlot.save-1217"><a href="#BoxPlot.save-1217"><span class="linenos">1217</span></a>        <span class="c1"># * If the plot IS NOT a part of a multiplot (= plt object),</span>
-</span><span id="BoxPlot.save-1218"><a href="#BoxPlot.save-1218"><span class="linenos">1218</span></a>        <span class="c1">#   it can be saved here,</span>
-</span><span id="BoxPlot.save-1219"><a href="#BoxPlot.save-1219"><span class="linenos">1219</span></a>        <span class="c1">#   because in such a case it represents an individual file.</span>
-</span><span id="BoxPlot.save-1220"><a href="#BoxPlot.save-1220"><span class="linenos">1220</span></a>        <span class="c1"># * If the plot IS a part of a multiplot  (= ax object of a fig object)</span>
-</span><span id="BoxPlot.save-1221"><a href="#BoxPlot.save-1221"><span class="linenos">1221</span></a>        <span class="c1">#   it cannot be saved here, because it does not make sense.</span>
-</span><span id="BoxPlot.save-1222"><a href="#BoxPlot.save-1222"><span class="linenos">1222</span></a>        <span class="c1">#   Instead, you typically save the whole fig at the end of the script,</span>
-</span><span id="BoxPlot.save-1223"><a href="#BoxPlot.save-1223"><span class="linenos">1223</span></a>        
-</span><span id="BoxPlot.save-1224"><a href="#BoxPlot.save-1224"><span class="linenos">1224</span></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BoxPlot.save-1225"><a href="#BoxPlot.save-1225"><span class="linenos">1225</span></a>            <span class="c1"># Figure is NOT a part of multiplot - Ok to save to file.</span>
-</span><span id="BoxPlot.save-1226"><a href="#BoxPlot.save-1226"><span class="linenos">1226</span></a>            <span class="c1"># For saving, we use a universal external function,</span>
-</span><span id="BoxPlot.save-1227"><a href="#BoxPlot.save-1227"><span class="linenos">1227</span></a>            <span class="c1"># to avoid code repetition - saving is the same for all plot types.</span>
-</span><span id="BoxPlot.save-1228"><a href="#BoxPlot.save-1228"><span class="linenos">1228</span></a>            <span class="n">PlotSaver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">output_graph</span><span class="p">,</span> <span class="n">dpi</span><span class="p">)</span>
-</span><span id="BoxPlot.save-1229"><a href="#BoxPlot.save-1229"><span class="linenos">1229</span></a>        <span class="k">else</span><span class="p">:</span>
-</span><span id="BoxPlot.save-1230"><a href="#BoxPlot.save-1230"><span class="linenos">1230</span></a>            <span class="c1"># Figure is a part of multiplot =&gt; just print warning.</span>
-</span><span id="BoxPlot.save-1231"><a href="#BoxPlot.save-1231"><span class="linenos">1231</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The plot is a part of a multiplot.&#39;</span><span class="p">)</span>
-</span><span id="BoxPlot.save-1232"><a href="#BoxPlot.save-1232"><span class="linenos">1232</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;It makes no sense to save individual subplots.&#39;</span><span class="p">)</span>
-</span><span id="BoxPlot.save-1233"><a href="#BoxPlot.save-1233"><span class="linenos">1233</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Function ignored =&gt; save the whole figure instead!&#39;</span><span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="BoxPlot.save-1207"><a href="#BoxPlot.save-1207"><span class="linenos">1207</span></a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_graph</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">):</span>
+</span><span id="BoxPlot.save-1208"><a href="#BoxPlot.save-1208"><span class="linenos">1208</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BoxPlot.save-1209"><a href="#BoxPlot.save-1209"><span class="linenos">1209</span></a><span class="sd">        Save boxplot to image file.</span>
+</span><span id="BoxPlot.save-1210"><a href="#BoxPlot.save-1210"><span class="linenos">1210</span></a>
+</span><span id="BoxPlot.save-1211"><a href="#BoxPlot.save-1211"><span class="linenos">1211</span></a><span class="sd">        Parameters</span>
+</span><span id="BoxPlot.save-1212"><a href="#BoxPlot.save-1212"><span class="linenos">1212</span></a><span class="sd">        ----------</span>
+</span><span id="BoxPlot.save-1213"><a href="#BoxPlot.save-1213"><span class="linenos">1213</span></a><span class="sd">        output_graph : str, optional, default is &#39;default&#39;</span>
+</span><span id="BoxPlot.save-1214"><a href="#BoxPlot.save-1214"><span class="linenos">1214</span></a><span class="sd">            Name of the output graph, such as &#39;my_plot.png&#39;.</span>
+</span><span id="BoxPlot.save-1215"><a href="#BoxPlot.save-1215"><span class="linenos">1215</span></a><span class="sd">            If not given, some suitable default filename will be created.</span>
+</span><span id="BoxPlot.save-1216"><a href="#BoxPlot.save-1216"><span class="linenos">1216</span></a><span class="sd">        dpi : int, optional, default is 300</span>
+</span><span id="BoxPlot.save-1217"><a href="#BoxPlot.save-1217"><span class="linenos">1217</span></a><span class="sd">            DPI resolution of the saved plot.</span>
+</span><span id="BoxPlot.save-1218"><a href="#BoxPlot.save-1218"><span class="linenos">1218</span></a><span class="sd">            </span>
+</span><span id="BoxPlot.save-1219"><a href="#BoxPlot.save-1219"><span class="linenos">1219</span></a><span class="sd">        Returns</span>
+</span><span id="BoxPlot.save-1220"><a href="#BoxPlot.save-1220"><span class="linenos">1220</span></a><span class="sd">        -------</span>
+</span><span id="BoxPlot.save-1221"><a href="#BoxPlot.save-1221"><span class="linenos">1221</span></a><span class="sd">        None</span>
+</span><span id="BoxPlot.save-1222"><a href="#BoxPlot.save-1222"><span class="linenos">1222</span></a><span class="sd">            The output is the plot saved in a file.</span>
+</span><span id="BoxPlot.save-1223"><a href="#BoxPlot.save-1223"><span class="linenos">1223</span></a><span class="sd">        &#39;&#39;&#39;</span>
+</span><span id="BoxPlot.save-1224"><a href="#BoxPlot.save-1224"><span class="linenos">1224</span></a>        
+</span><span id="BoxPlot.save-1225"><a href="#BoxPlot.save-1225"><span class="linenos">1225</span></a>        <span class="c1"># Boxplots can be used in multiplots (although it is not typical).</span>
+</span><span id="BoxPlot.save-1226"><a href="#BoxPlot.save-1226"><span class="linenos">1226</span></a>        <span class="c1"># * If the plot IS NOT a part of a multiplot (= plt object),</span>
+</span><span id="BoxPlot.save-1227"><a href="#BoxPlot.save-1227"><span class="linenos">1227</span></a>        <span class="c1">#   it can be saved here,</span>
+</span><span id="BoxPlot.save-1228"><a href="#BoxPlot.save-1228"><span class="linenos">1228</span></a>        <span class="c1">#   because in such a case it represents an individual file.</span>
+</span><span id="BoxPlot.save-1229"><a href="#BoxPlot.save-1229"><span class="linenos">1229</span></a>        <span class="c1"># * If the plot IS a part of a multiplot  (= ax object of a fig object)</span>
+</span><span id="BoxPlot.save-1230"><a href="#BoxPlot.save-1230"><span class="linenos">1230</span></a>        <span class="c1">#   it cannot be saved here, because it does not make sense.</span>
+</span><span id="BoxPlot.save-1231"><a href="#BoxPlot.save-1231"><span class="linenos">1231</span></a>        <span class="c1">#   Instead, you typically save the whole fig at the end of the script,</span>
+</span><span id="BoxPlot.save-1232"><a href="#BoxPlot.save-1232"><span class="linenos">1232</span></a>        
+</span><span id="BoxPlot.save-1233"><a href="#BoxPlot.save-1233"><span class="linenos">1233</span></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="BoxPlot.save-1234"><a href="#BoxPlot.save-1234"><span class="linenos">1234</span></a>            <span class="c1"># Figure is NOT a part of multiplot - Ok to save to file.</span>
+</span><span id="BoxPlot.save-1235"><a href="#BoxPlot.save-1235"><span class="linenos">1235</span></a>            <span class="c1"># For saving, we use a universal external function,</span>
+</span><span id="BoxPlot.save-1236"><a href="#BoxPlot.save-1236"><span class="linenos">1236</span></a>            <span class="c1"># to avoid code repetition - saving is the same for all plot types.</span>
+</span><span id="BoxPlot.save-1237"><a href="#BoxPlot.save-1237"><span class="linenos">1237</span></a>            <span class="n">PlotSaver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">output_graph</span><span class="p">,</span> <span class="n">dpi</span><span class="p">)</span>
+</span><span id="BoxPlot.save-1238"><a href="#BoxPlot.save-1238"><span class="linenos">1238</span></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="BoxPlot.save-1239"><a href="#BoxPlot.save-1239"><span class="linenos">1239</span></a>            <span class="c1"># Figure is a part of multiplot =&gt; just print warning.</span>
+</span><span id="BoxPlot.save-1240"><a href="#BoxPlot.save-1240"><span class="linenos">1240</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The plot is a part of a multiplot.&#39;</span><span class="p">)</span>
+</span><span id="BoxPlot.save-1241"><a href="#BoxPlot.save-1241"><span class="linenos">1241</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;It makes no sense to save individual subplots.&#39;</span><span class="p">)</span>
+</span><span id="BoxPlot.save-1242"><a href="#BoxPlot.save-1242"><span class="linenos">1242</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Function ignored =&gt; save the whole figure instead!&#39;</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -4785,48 +4812,48 @@ DPI resolution of the saved plot.</li>
 
     </div>
     <a class="headerlink" href="#BoxPlot.statistics"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="BoxPlot.statistics-1236"><a href="#BoxPlot.statistics-1236"><span class="linenos">1236</span></a>    <span class="k">def</span> <span class="nf">statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">CATS</span><span class="p">,</span> <span class="n">output_stats</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">):</span>
-</span><span id="BoxPlot.statistics-1237"><a href="#BoxPlot.statistics-1237"><span class="linenos">1237</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
-</span><span id="BoxPlot.statistics-1238"><a href="#BoxPlot.statistics-1238"><span class="linenos">1238</span></a><span class="sd">        Calculate and save boxplot statistics to text file.</span>
-</span><span id="BoxPlot.statistics-1239"><a href="#BoxPlot.statistics-1239"><span class="linenos">1239</span></a>
-</span><span id="BoxPlot.statistics-1240"><a href="#BoxPlot.statistics-1240"><span class="linenos">1240</span></a><span class="sd">        Parameters</span>
-</span><span id="BoxPlot.statistics-1241"><a href="#BoxPlot.statistics-1241"><span class="linenos">1241</span></a><span class="sd">        ----------</span>
-</span><span id="BoxPlot.statistics-1242"><a href="#BoxPlot.statistics-1242"><span class="linenos">1242</span></a><span class="sd">        X : str</span>
-</span><span id="BoxPlot.statistics-1243"><a href="#BoxPlot.statistics-1243"><span class="linenos">1243</span></a><span class="sd">            Name of X-variable = column in a Dataframe (such as Sterilization),</span>
-</span><span id="BoxPlot.statistics-1244"><a href="#BoxPlot.statistics-1244"><span class="linenos">1244</span></a><span class="sd">            which contains categorical data.</span>
-</span><span id="BoxPlot.statistics-1245"><a href="#BoxPlot.statistics-1245"><span class="linenos">1245</span></a><span class="sd">        Y : str</span>
-</span><span id="BoxPlot.statistics-1246"><a href="#BoxPlot.statistics-1246"><span class="linenos">1246</span></a><span class="sd">            Name of Y-variable = column in a DataFrame (such as OI_max),</span>
-</span><span id="BoxPlot.statistics-1247"><a href="#BoxPlot.statistics-1247"><span class="linenos">1247</span></a><span class="sd">            which contains numerical data.</span>
-</span><span id="BoxPlot.statistics-1248"><a href="#BoxPlot.statistics-1248"><span class="linenos">1248</span></a><span class="sd">        CATS : list</span>
-</span><span id="BoxPlot.statistics-1249"><a href="#BoxPlot.statistics-1249"><span class="linenos">1249</span></a><span class="sd">            Names of categories = values in a Dataframe (such as [&#39;IRR,&#39;EtO&#39;]),</span>
-</span><span id="BoxPlot.statistics-1250"><a href="#BoxPlot.statistics-1250"><span class="linenos">1250</span></a><span class="sd">            which should be compared.</span>
-</span><span id="BoxPlot.statistics-1251"><a href="#BoxPlot.statistics-1251"><span class="linenos">1251</span></a><span class="sd">        output_stats : str, optional, default is &#39;default&#39;</span>
-</span><span id="BoxPlot.statistics-1252"><a href="#BoxPlot.statistics-1252"><span class="linenos">1252</span></a><span class="sd">            Name of the output text file with statistics.</span>
-</span><span id="BoxPlot.statistics-1253"><a href="#BoxPlot.statistics-1253"><span class="linenos">1253</span></a><span class="sd">            If &#39;default&#39; the name will be (input_script_name + .txt).</span>
-</span><span id="BoxPlot.statistics-1254"><a href="#BoxPlot.statistics-1254"><span class="linenos">1254</span></a><span class="sd">            </span>
-</span><span id="BoxPlot.statistics-1255"><a href="#BoxPlot.statistics-1255"><span class="linenos">1255</span></a><span class="sd">        Returns</span>
-</span><span id="BoxPlot.statistics-1256"><a href="#BoxPlot.statistics-1256"><span class="linenos">1256</span></a><span class="sd">        -------</span>
-</span><span id="BoxPlot.statistics-1257"><a href="#BoxPlot.statistics-1257"><span class="linenos">1257</span></a><span class="sd">        None</span>
-</span><span id="BoxPlot.statistics-1258"><a href="#BoxPlot.statistics-1258"><span class="linenos">1258</span></a><span class="sd">            The output is the calculated statistics</span>
-</span><span id="BoxPlot.statistics-1259"><a href="#BoxPlot.statistics-1259"><span class="linenos">1259</span></a><span class="sd">            on the screen and in the text file (with name = output_stats).</span>
-</span><span id="BoxPlot.statistics-1260"><a href="#BoxPlot.statistics-1260"><span class="linenos">1260</span></a><span class="sd">        &#39;&#39;&#39;</span>
-</span><span id="BoxPlot.statistics-1261"><a href="#BoxPlot.statistics-1261"><span class="linenos">1261</span></a>        <span class="c1"># Name of TXT file with output statistics that corresponds to BoxPlot</span>
-</span><span id="BoxPlot.statistics-1262"><a href="#BoxPlot.statistics-1262"><span class="linenos">1262</span></a>        <span class="k">if</span> <span class="n">output_stats</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="n">output_stats</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;.txt&#39;</span>
-</span><span id="BoxPlot.statistics-1263"><a href="#BoxPlot.statistics-1263"><span class="linenos">1263</span></a>        <span class="c1"># Start writing to both standard output and output_stats file</span>
-</span><span id="BoxPlot.statistics-1264"><a href="#BoxPlot.statistics-1264"><span class="linenos">1264</span></a>        <span class="n">logfile</span> <span class="o">=</span> <span class="n">mio</span><span class="o">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">output_stats</span><span class="p">)</span>
-</span><span id="BoxPlot.statistics-1265"><a href="#BoxPlot.statistics-1265"><span class="linenos">1265</span></a>        <span class="c1"># Calulate and print statistics</span>
-</span><span id="BoxPlot.statistics-1266"><a href="#BoxPlot.statistics-1266"><span class="linenos">1266</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correlation matrix table (p-values)&#39;</span><span class="p">)</span>
-</span><span id="BoxPlot.statistics-1267"><a href="#BoxPlot.statistics-1267"><span class="linenos">1267</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----------------------------------&#39;</span><span class="p">)</span>
-</span><span id="BoxPlot.statistics-1268"><a href="#BoxPlot.statistics-1268"><span class="linenos">1268</span></a>        <span class="k">for</span> <span class="n">category1</span> <span class="ow">in</span> <span class="n">CATS</span><span class="p">:</span>
-</span><span id="BoxPlot.statistics-1269"><a href="#BoxPlot.statistics-1269"><span class="linenos">1269</span></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">category1</span><span class="si">:</span><span class="s1">12s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span><span id="BoxPlot.statistics-1270"><a href="#BoxPlot.statistics-1270"><span class="linenos">1270</span></a>            <span class="k">for</span> <span class="n">category2</span> <span class="ow">in</span> <span class="n">CATS</span><span class="p">:</span>
-</span><span id="BoxPlot.statistics-1271"><a href="#BoxPlot.statistics-1271"><span class="linenos">1271</span></a>                <span class="n">xdata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">Y</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="o">==</span> <span class="n">category1</span><span class="p">]</span>
-</span><span id="BoxPlot.statistics-1272"><a href="#BoxPlot.statistics-1272"><span class="linenos">1272</span></a>                <span class="n">ydata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">Y</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="o">==</span> <span class="n">category2</span><span class="p">]</span>
-</span><span id="BoxPlot.statistics-1273"><a href="#BoxPlot.statistics-1273"><span class="linenos">1273</span></a>                <span class="n">t</span><span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="n">equal_var</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-</span><span id="BoxPlot.statistics-1274"><a href="#BoxPlot.statistics-1274"><span class="linenos">1274</span></a>                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s1">8.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-</span><span id="BoxPlot.statistics-1275"><a href="#BoxPlot.statistics-1275"><span class="linenos">1275</span></a>            <span class="nb">print</span><span class="p">()</span>
-</span><span id="BoxPlot.statistics-1276"><a href="#BoxPlot.statistics-1276"><span class="linenos">1276</span></a>        <span class="c1"># Close dual output</span>
-</span><span id="BoxPlot.statistics-1277"><a href="#BoxPlot.statistics-1277"><span class="linenos">1277</span></a>        <span class="n">logfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="BoxPlot.statistics-1245"><a href="#BoxPlot.statistics-1245"><span class="linenos">1245</span></a>    <span class="k">def</span> <span class="nf">statistics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">CATS</span><span class="p">,</span> <span class="n">output_stats</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">):</span>
+</span><span id="BoxPlot.statistics-1246"><a href="#BoxPlot.statistics-1246"><span class="linenos">1246</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BoxPlot.statistics-1247"><a href="#BoxPlot.statistics-1247"><span class="linenos">1247</span></a><span class="sd">        Calculate and save boxplot statistics to text file.</span>
+</span><span id="BoxPlot.statistics-1248"><a href="#BoxPlot.statistics-1248"><span class="linenos">1248</span></a>
+</span><span id="BoxPlot.statistics-1249"><a href="#BoxPlot.statistics-1249"><span class="linenos">1249</span></a><span class="sd">        Parameters</span>
+</span><span id="BoxPlot.statistics-1250"><a href="#BoxPlot.statistics-1250"><span class="linenos">1250</span></a><span class="sd">        ----------</span>
+</span><span id="BoxPlot.statistics-1251"><a href="#BoxPlot.statistics-1251"><span class="linenos">1251</span></a><span class="sd">        X : str</span>
+</span><span id="BoxPlot.statistics-1252"><a href="#BoxPlot.statistics-1252"><span class="linenos">1252</span></a><span class="sd">            Name of X-variable = column in a Dataframe (such as Sterilization),</span>
+</span><span id="BoxPlot.statistics-1253"><a href="#BoxPlot.statistics-1253"><span class="linenos">1253</span></a><span class="sd">            which contains categorical data.</span>
+</span><span id="BoxPlot.statistics-1254"><a href="#BoxPlot.statistics-1254"><span class="linenos">1254</span></a><span class="sd">        Y : str</span>
+</span><span id="BoxPlot.statistics-1255"><a href="#BoxPlot.statistics-1255"><span class="linenos">1255</span></a><span class="sd">            Name of Y-variable = column in a DataFrame (such as OI_max),</span>
+</span><span id="BoxPlot.statistics-1256"><a href="#BoxPlot.statistics-1256"><span class="linenos">1256</span></a><span class="sd">            which contains numerical data.</span>
+</span><span id="BoxPlot.statistics-1257"><a href="#BoxPlot.statistics-1257"><span class="linenos">1257</span></a><span class="sd">        CATS : list</span>
+</span><span id="BoxPlot.statistics-1258"><a href="#BoxPlot.statistics-1258"><span class="linenos">1258</span></a><span class="sd">            Names of categories = values in a Dataframe (such as [&#39;IRR,&#39;EtO&#39;]),</span>
+</span><span id="BoxPlot.statistics-1259"><a href="#BoxPlot.statistics-1259"><span class="linenos">1259</span></a><span class="sd">            which should be compared.</span>
+</span><span id="BoxPlot.statistics-1260"><a href="#BoxPlot.statistics-1260"><span class="linenos">1260</span></a><span class="sd">        output_stats : str, optional, default is &#39;default&#39;</span>
+</span><span id="BoxPlot.statistics-1261"><a href="#BoxPlot.statistics-1261"><span class="linenos">1261</span></a><span class="sd">            Name of the output text file with statistics.</span>
+</span><span id="BoxPlot.statistics-1262"><a href="#BoxPlot.statistics-1262"><span class="linenos">1262</span></a><span class="sd">            If &#39;default&#39; the name will be (input_script_name + .txt).</span>
+</span><span id="BoxPlot.statistics-1263"><a href="#BoxPlot.statistics-1263"><span class="linenos">1263</span></a><span class="sd">            </span>
+</span><span id="BoxPlot.statistics-1264"><a href="#BoxPlot.statistics-1264"><span class="linenos">1264</span></a><span class="sd">        Returns</span>
+</span><span id="BoxPlot.statistics-1265"><a href="#BoxPlot.statistics-1265"><span class="linenos">1265</span></a><span class="sd">        -------</span>
+</span><span id="BoxPlot.statistics-1266"><a href="#BoxPlot.statistics-1266"><span class="linenos">1266</span></a><span class="sd">        None</span>
+</span><span id="BoxPlot.statistics-1267"><a href="#BoxPlot.statistics-1267"><span class="linenos">1267</span></a><span class="sd">            The output is the calculated statistics</span>
+</span><span id="BoxPlot.statistics-1268"><a href="#BoxPlot.statistics-1268"><span class="linenos">1268</span></a><span class="sd">            on the screen and in the text file (with name = output_stats).</span>
+</span><span id="BoxPlot.statistics-1269"><a href="#BoxPlot.statistics-1269"><span class="linenos">1269</span></a><span class="sd">        &#39;&#39;&#39;</span>
+</span><span id="BoxPlot.statistics-1270"><a href="#BoxPlot.statistics-1270"><span class="linenos">1270</span></a>        <span class="c1"># Name of TXT file with output statistics that corresponds to BoxPlot</span>
+</span><span id="BoxPlot.statistics-1271"><a href="#BoxPlot.statistics-1271"><span class="linenos">1271</span></a>        <span class="k">if</span> <span class="n">output_stats</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="n">output_stats</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;.txt&#39;</span>
+</span><span id="BoxPlot.statistics-1272"><a href="#BoxPlot.statistics-1272"><span class="linenos">1272</span></a>        <span class="c1"># Start writing to both standard output and output_stats file</span>
+</span><span id="BoxPlot.statistics-1273"><a href="#BoxPlot.statistics-1273"><span class="linenos">1273</span></a>        <span class="n">logfile</span> <span class="o">=</span> <span class="n">mio</span><span class="o">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">output_stats</span><span class="p">)</span>
+</span><span id="BoxPlot.statistics-1274"><a href="#BoxPlot.statistics-1274"><span class="linenos">1274</span></a>        <span class="c1"># Calulate and print statistics</span>
+</span><span id="BoxPlot.statistics-1275"><a href="#BoxPlot.statistics-1275"><span class="linenos">1275</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correlation matrix table (p-values)&#39;</span><span class="p">)</span>
+</span><span id="BoxPlot.statistics-1276"><a href="#BoxPlot.statistics-1276"><span class="linenos">1276</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----------------------------------&#39;</span><span class="p">)</span>
+</span><span id="BoxPlot.statistics-1277"><a href="#BoxPlot.statistics-1277"><span class="linenos">1277</span></a>        <span class="k">for</span> <span class="n">category1</span> <span class="ow">in</span> <span class="n">CATS</span><span class="p">:</span>
+</span><span id="BoxPlot.statistics-1278"><a href="#BoxPlot.statistics-1278"><span class="linenos">1278</span></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">category1</span><span class="si">:</span><span class="s1">12s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</span><span id="BoxPlot.statistics-1279"><a href="#BoxPlot.statistics-1279"><span class="linenos">1279</span></a>            <span class="k">for</span> <span class="n">category2</span> <span class="ow">in</span> <span class="n">CATS</span><span class="p">:</span>
+</span><span id="BoxPlot.statistics-1280"><a href="#BoxPlot.statistics-1280"><span class="linenos">1280</span></a>                <span class="n">xdata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">Y</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="o">==</span> <span class="n">category1</span><span class="p">]</span>
+</span><span id="BoxPlot.statistics-1281"><a href="#BoxPlot.statistics-1281"><span class="linenos">1281</span></a>                <span class="n">ydata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">Y</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="o">==</span> <span class="n">category2</span><span class="p">]</span>
+</span><span id="BoxPlot.statistics-1282"><a href="#BoxPlot.statistics-1282"><span class="linenos">1282</span></a>                <span class="n">t</span><span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="n">equal_var</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</span><span id="BoxPlot.statistics-1283"><a href="#BoxPlot.statistics-1283"><span class="linenos">1283</span></a>                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s1">8.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</span><span id="BoxPlot.statistics-1284"><a href="#BoxPlot.statistics-1284"><span class="linenos">1284</span></a>            <span class="nb">print</span><span class="p">()</span>
+</span><span id="BoxPlot.statistics-1285"><a href="#BoxPlot.statistics-1285"><span class="linenos">1285</span></a>        <span class="c1"># Close dual output</span>
+</span><span id="BoxPlot.statistics-1286"><a href="#BoxPlot.statistics-1286"><span class="linenos">1286</span></a>        <span class="n">logfile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></pre></div>
 
 
