@@ -5,8 +5,8 @@ Data-related functions for package MDBASE.
 
 Content of the module
 
-* Two key functions: Named `read_*` and reading XLSX data to pandas.DataFrame. 
-* Aux class: Auxiliary functions that can modify data read to pandas.DataFrame.
+* Two functions named `read_*`, which read XLS files to one pandas.DataFrame. 
+* Aux class: Auxiliary functions that can modify data in pandas.DataFrame.
 * Logger class: A class that duplicates sys.stdout to a log file.
 '''
 

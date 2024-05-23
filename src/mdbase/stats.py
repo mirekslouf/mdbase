@@ -1,7 +1,7 @@
 '''
-mdbase.stats
-------------
-Statistical calculations and plotting in MDBASE.
+Module: mdbase.stats
+---------------------
+Statistical calculations and plotting in package MDBASE.
 
 * In MDBASE, statistical calculations and plotting are connected.
 * Current version of MDBASE calculates 4 different plot types + statistics:
