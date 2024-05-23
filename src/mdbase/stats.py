@@ -1123,15 +1123,31 @@ class BoxPlot:
         None.
 
         '''
-        # Boxplot parameters below are somewhat confusing - brief summary:
+        # Create the boxplot
+        # => create boxplot = add boxes = command: sns.boxplot 
+        # => the following commands/functions just fine-tune the boxplot params
+        # -----
+        # Boxplot must be created with pre-processed dataframe
+        # * Example:
+        #   If we want to compare 'EtO' and 'gIRR' sterilizations
+        #   the dataframe must contain ONLY 'EtO' and 'gIRR' values
+        #   in df.Sterilization column (i.e. in the column with x-data).
+        # * This function accepts the pre-processed database.
+        #   The database must be pre-processed in the main script.
+        #   We can use something like: df = df[df[X].isin(CATEGORIES)],
+        #   which will keep only specific CATEGORIES in column X.
+        # -----
+        # Boxplot parameters:
+        # (boxplot parameters are somewhat confusing => described below
         # (boxplots are rather flexible, this is just one of the possibilities
         # X = column in df containing categorical data -> X-axis
         # Y = column in df containing numerical data (such as OI_max) -> Y-axis
         # hue = color of X-data => here: number of colors = number of X-data
-        # legend=False => no legend -> default here, but it is good to specify)
+        # legend=False => no legend -> default, but we set this explicitly
         # order = order of data in X-axis -> here: order = categories order
         # palette = definition of colors -> no of colors = no of categories
         # width, ax = clear: width of columns and ax-object = where to plot
+        # -----
         sns.boxplot(
             data=self.df, x=x, y=y, hue=x, legend=False,
             order=categories, palette=colors, width=0.5, ax=self.ax)

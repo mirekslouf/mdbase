@@ -10,6 +10,7 @@ Additional manipulations with data in package MDBASE.
 
 
 import numpy as np
+import pandas as pd
 
 
 def add_normalized_OI(df):
@@ -74,6 +75,9 @@ def replace_unknown_values(
     This function is used, among others, in data.add_normalized_OI.
     '''
     
+    # (0) BEFORE replacements, switch off the (deprecated) silent downcasting
+    # (this is necessary to avoid FutureWarning on the stdout
+    pd.set_option('future.no_silent_downcasting', True)
     # (1) Get length of array containing unknown values
     n = len(unknown_values)
     # (2) Create an array with equivalent lenght with np.nan values

@@ -51,11 +51,14 @@ def read_single_database(
     if delipidation == True:
         df = df[df.Delipidation == 'Yes']
     
-    # Replace non-numeric values
+    # Replace comments and unknown values
+    # (a) BEFORE replacements, switch off the (deprecated) silent downcasting
+    # (this is necessary to avoid FutureWarning on the stdout
+    pd.set_option('future.no_silent_downcasting', True)
+    # (b) Replace non-numeric values
     df = df.replace('x',np.nan)
     df = df.replace('n',np.nan)
-    
-    # Replace commented values = values starting with #
+    # (c) Replace commented values = values starting with #
     df = df.replace(regex=r'^#.*', value=np.nan)
     
     # Return pd.DataFrame
@@ -110,9 +113,9 @@ class Logger(object):
     '''
     A class that duplicates sys.stdout to a log file.
     
-    * source: https://stackoverflow.com/q/616645
-    * slightly modified & corrected buff=0 => buff=1
-    * it is useful also in Spyder - see Usage #3 below
+    * Source: https://stackoverflow.com/q/616645
+    * The source was slightly modified & corrected: buff=0 => buff=1
+    * The class can be useful also in Spyder Console - see Usage #3 below
     
     Usage #1 (classic: open-close):
     
@@ -125,7 +128,7 @@ class Logger(object):
     >>> with Logger('log.out'):
     >>>     print('Something...')
             
-    Usage #3 (iPython, Spyder console, copy output to a text file):
+    Usage #3 (iPython, Spyder Console, copy output to a text file):
     
     >>> with Logger('log.out'):
     >>>     runfile('myprog.py')

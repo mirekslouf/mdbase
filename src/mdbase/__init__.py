@@ -37,4 +37,4 @@ Simple and minimalistic, but real and working example:
 >>> CPLOT.save('corr_oi-ci.py.png')
 '''
 
-__version__ = "0.3.3"
+__version__ = "0.3.4"
