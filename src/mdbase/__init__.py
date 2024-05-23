@@ -1,19 +1,18 @@
 '''
-mdbase package
+Package: mdbase
 --------------
 Join and proces multiple XLS files.
 
 List of modules:
 
-* mdbase.io = read multiple XLS files into one single pandas.DataFrame
-* mdbase.data = additional, auxiliary functions for data in pandas.DataFrame
-* mdbase.stats = key module; statistical calculations and plotting of the data
+* mdbase.data = read multiple XLS files into one single pandas.DataFrame
+* mdbase.stats = statistical calculations and plotting of the DataFrame data
 
 Simple and minimalistic, but real and working example:
 
 >>> """ MDbase :: correlation plot """
 >>> 
->>> import mdbase.io, mdbase.stats
+>>> import mdbase.data, mdbase.stats
 >>> 
 >>> # Define directory with databases + XLS database files
 >>> DDIR  = r'../../'
@@ -22,7 +21,7 @@ Simple and minimalistic, but real and working example:
 >>> DBASE3 = DDIR + r'DBASE/ES/database_es_2024-03-11.xlsm'
 >>> 
 >>> # Join all XLS databases into one pandas.DataFrame object
->>> df = mdbase.io.read_multiple_databases(
+>>> df = mdbase.data.read_multiple_databases(
 >>>     excel_files=[DBASE1,DBASE2,DBASE3],
 >>>     sheet_names=['HIPs','KNEEs'])
 >>> 
@@ -37,4 +36,4 @@ Simple and minimalistic, but real and working example:
 >>> CPLOT.save('corr_oi-ci.py.png')
 '''
 
-__version__ = "0.3.4"
+__version__ = "0.4"

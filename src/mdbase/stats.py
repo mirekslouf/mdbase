@@ -34,7 +34,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats, scipy.optimize
 import seaborn as sns
-import mdbase.io as mio
+import mdbase.data
 
 class PlotParameters:
     '''
@@ -1285,7 +1285,7 @@ class BoxPlot:
         # Name of TXT file with output statistics that corresponds to BoxPlot
         if output_stats == 'default': output_stats = sys.argv[0]+'.txt'
         # Start writing to both standard output and output_stats file
-        logfile = mio.Logger(output_stats)
+        logfile = mdbase.data.Logger(output_stats)
         # Calulate and print statistics
         print('Correlation matrix table (p-values)')
         print('-----------------------------------')

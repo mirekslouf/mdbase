@@ -30,7 +30,6 @@
             <h2>Submodules</h2>
             <ul>
                     <li><a href="mdbase/data.html">data</a></li>
-                    <li><a href="mdbase/io.html">io</a></li>
                     <li><a href="mdbase/stats.html">stats</a></li>
             </ul>
 
@@ -59,7 +58,7 @@ mdbase    </h1>
 <p>List of modules:</p>
 
 <ul>
-<li><a href="mdbase/io.html">mdbase.io</a> = read multiple XLS files into one single pandas.DataFrame</li>
+<li>mdbase.io = read multiple XLS files into one single pandas.DataFrame</li>
 <li><a href="mdbase/data.html">mdbase.data</a> = additional, auxiliary functions for data in pandas.DataFrame</li>
 <li><a href="mdbase/stats.html">mdbase.stats</a> = key module; statistical calculations and plotting of the data</li>
 </ul>
@@ -69,7 +68,7 @@ mdbase    </h1>
 <div class="pdoc-code codehilite">
 <pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="sd">&quot;&quot;&quot; MDbase :: correlation plot &quot;&quot;&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn"><a href="mdbase/io.html">mdbase.io</a></span><span class="o">,</span> <span class="nn"><a href="mdbase/stats.html">mdbase.stats</a></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mdbase.io</span><span class="o">,</span> <span class="nn"><a href="mdbase/stats.html">mdbase.stats</a></span>
 <span class="gp">&gt;&gt;&gt; </span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Define directory with databases + XLS database files</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">DDIR</span>  <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;../../&#39;</span>
@@ -78,7 +77,7 @@ mdbase    </h1>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">DBASE3</span> <span class="o">=</span> <span class="n">DDIR</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;DBASE/ES/database_es_2024-03-11.xlsm&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Join all XLS databases into one pandas.DataFrame object</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n"><a href="mdbase/io.html#read_multiple_databases">mdbase.io.read_multiple_databases</a></span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">mdbase</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">read_multiple_databases</span><span class="p">(</span>
 <span class="gp">&gt;&gt;&gt; </span>    <span class="n">excel_files</span><span class="o">=</span><span class="p">[</span><span class="n">DBASE1</span><span class="p">,</span><span class="n">DBASE2</span><span class="p">,</span><span class="n">DBASE3</span><span class="p">],</span>
 <span class="gp">&gt;&gt;&gt; </span>    <span class="n">sheet_names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;HIPs&#39;</span><span class="p">,</span><span class="s1">&#39;KNEEs&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span>
